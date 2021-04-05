@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingStart="@dimen/activity_margin_lg"
+                android:paddingEnd="@dimen/activity_margin_lg"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/selector_background_wish_item_list">
+
+    <include layout="@layout/custom_layout_profile_picture"
+             android:id="@+id/profile_picture"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_centerVertical="true"
+             android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_picture"
+        android:layout_centerVertical="true"
+        style="@style/Regular16"
+        android:gravity="start"
+        android:textColor="@color/color_state_wish_item_list"
+        tools:text="Your action here"
+        android:duplicateParentState="true" />
+
+</RelativeLayout>

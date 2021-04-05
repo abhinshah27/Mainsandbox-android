@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingTop="26dp"
+    style="@style/ScrollbarStyleHor">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/btnAnchorLeftTop"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_left"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorCenterTop"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_center"
+                android:layout_gravity="center_horizontal"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorRightTop"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_right"
+                android:layout_gravity="end"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorLeftCenter"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_left"
+                android:layout_gravity="center_vertical"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorCenterCenter"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_center"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorRightCenter"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_right"
+                android:layout_gravity="center_vertical|end"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorLeftBottom"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_left"
+                android:layout_gravity="bottom|start"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorCenterBottom"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_center"
+                android:layout_gravity="center_horizontal|bottom"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnAnchorRightBottom"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:background="@drawable/selector_item_alignment_bckgr"
+            android:padding="4dp"
+            android:layout_marginEnd="@dimen/activity_margin">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/selector_item_alignment_right"
+                android:layout_gravity="bottom|end"
+                android:duplicateParentState="true"/>
+        </FrameLayout>
+    </LinearLayout>
+</HorizontalScrollView>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/divider_on_white">-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorLeftTop"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/btnAnchorLeftCenter"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnAnchorCenterTop"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:srcCompat="@drawable/ic_format_align_left_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorCenterTop"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/btnAnchorCenterCenter"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnAnchorRightTop"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/btnAnchorLeftTop"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:srcCompat="@drawable/ic_format_align_center_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorRightTop"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/btnAnchorRightCenter"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/btnAnchorCenterTop"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:srcCompat="@drawable/ic_format_align_right_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorLeftCenter"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/btnAnchorLeftBottom"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnAnchorCenterCenter"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btnAnchorLeftTop"-->
+        <!--app:srcCompat="@drawable/ic_format_align_left_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorCenterCenter"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/btnAnchorCenterBottom"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnAnchorRightCenter"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/btnAnchorLeftCenter"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btnAnchorCenterTop"-->
+        <!--app:srcCompat="@drawable/ic_format_align_center_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorRightCenter"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/btnAnchorRightBottom"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/btnAnchorCenterCenter"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btnAnchorRightTop"-->
+        <!--app:srcCompat="@drawable/ic_format_align_right_black_24dp" />-->
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorLeftBottom"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnAnchorCenterBottom"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btnAnchorLeftCenter"-->
+        <!--app:srcCompat="@drawable/ic_format_align_left_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorCenterBottom"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnAnchorRightBottom"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/btnAnchorLeftBottom"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btnAnchorCenterCenter"-->
+        <!--app:srcCompat="@drawable/ic_format_align_center_black_24dp" />-->
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnAnchorRightBottom"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/btnAnchorCenterBottom"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/btnAnchorRightCenter"-->
+        <!--app:srcCompat="@drawable/ic_format_align_right_black_24dp" />-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

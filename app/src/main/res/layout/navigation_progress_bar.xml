@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wish_navigation_progress_bar"
+                android:layout_gravity="bottom">
+
+    <TextView
+        android:id="@+id/wish_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:gravity="center_vertical"
+        style="@style/SemiBold16"
+        android:textColor="@color/black_70"
+        android:text="@string/cancel"/>
+
+    <TextView
+        android:id="@+id/wish_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="@dimen/activity_margin"
+        android:paddingEnd="@dimen/activity_margin"
+        android:gravity="center_vertical"
+        style="@style/SemiBold20"
+        android:textColor="@color/color_state_wish_next"
+        android:text="@string/action_next"/>
+
+
+    <!-- STEPS CONTAINER -->
+
+    <LinearLayout
+        android:id="@+id/wish_progress_bar"
+        android:layout_width="60dp"
+        android:layout_height="4dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_toEndOf="@id/wish_cancel_btn"
+        android:layout_toStartOf="@id/wish_next_btn"
+        android:layout_centerInParent="true"
+        tools:background="@color/black_12"
+        android:weightSum="1"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/initiative_progress_bar"
+        android:layout_width="80dp"
+        android:layout_height="4dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        tools:background="@color/white"
+        android:weightSum="1"
+        android:visibility="gone"/>
+
+</RelativeLayout>

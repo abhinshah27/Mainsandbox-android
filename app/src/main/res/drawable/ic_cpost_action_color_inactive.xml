@@ -1,0 +1,32 @@
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="78dp"
+    android:height="78dp"
+    android:viewportWidth="78"
+    android:viewportHeight="78">
+  <path
+      android:pathData="M0,39.0001C0,60.5392 17.461,78 39.0001,78C60.5392,78 78,60.539 78,38.9999C78,17.4608 60.539,-0 38.9999,0C17.4608,0 -0,17.461 0,39.0001L0,39.0001ZM76,38.9999C76,59.4344 59.4347,76 39.0001,76C18.5655,76 2,59.4346 2,39.0001C2,18.5656 18.5653,2 38.9999,2C59.4345,2 76,18.5654 76,38.9999L76,38.9999Z"
+      android:fillColor="#000000"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M30.8813,36.3447L27.1432,40.1161C26.9523,40.3112 26.9523,40.6059 27.1432,40.801L34.0916,47.8536C34.2825,48.0488 34.5708,48.0488 34.7617,47.8536L45.7833,36.685C46.167,36.2927 46.0229,36 45.495,36L31.6955,36.0019C31.4072,36.0019 31.1209,36.1492 30.8813,36.3447Z"
+      android:fillColor="#000000"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M40.1869,21.5376L52.4779,34.2012C53.1737,34.918 53.1737,36.0175 52.4797,36.7324L35.2714,54.4624C34.5757,55.1792 33.5085,55.1792 32.8129,54.4624L20.5217,41.7988C19.826,41.082 19.826,39.9825 20.5217,39.2657L37.7283,21.5376C38.4241,20.8208 39.4912,20.8208 40.1869,21.5376L40.1869,21.5376ZM24.1853,40.5086L34.0649,50.6878L48.7655,35.4441L38.9331,25.3137L24.1853,40.5086L24.1853,40.5086Z"
+      android:fillColor="#000000"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M53.9193,39.3445C53.6859,38.8852 53.2667,38.8852 53.0333,39.3445C53.0333,39.3445 50,44.6734 50,46.5552C50,48.4391 51.5859,50 53.5,50C55.4141,50 57,48.4391 57,46.5552C56.9982,44.6731 53.9193,39.3445 53.9193,39.3445Z"
+      android:fillColor="#000000"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+</vector>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white">
+
+    <!-- ABOUT ME -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <FrameLayout
+            android:id="@+id/about_me_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="-5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_edit"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/about_me_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="-5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/Regular16"
+                android:text="@string/done"
+                android:textColor="@color/colorAccent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/about_me_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            style="@style/Bold18"
+            android:text="@string/about_me_title" />
+
+        <LinearLayout
+            android:id="@+id/quote_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_me_title"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="3dp"
+                app:srcCompat="@drawable/ic_quoteicon"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin">
+
+                <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Regular18"
+                    android:maxLines="2"
+                    android:textColor="@color/black_54"
+                    tools:text="Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit Lorem ipsum dolor sit "/>
+
+                <androidx.emoji.widget.EmojiAppCompatEditText
+                    android:id="@+id/description_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    style="@style/Regular18"
+                    android:hint="@string/user_detail_hint_description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLines="2"
+                    android:textColor="@color/black_54"
+                    android:textColorHint="@color/black_38"
+                    android:textCursorDrawable="@drawable/custom_cursor_drawable" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/birthday_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quote_section"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                app:srcCompat="@drawable/ic_birthday_black"/>
+
+            <TextView
+                android:id="@+id/birthday_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                style="@style/Regular18"
+                tools:text="August 25th, 1988"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relationship_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/birthday_section"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/icon_ring"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_marital_status"/>
+
+            <ImageView
+                android:id="@+id/spinner_indicator_marital_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_signup_down_indicator"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+            <Spinner
+                android:id="@+id/relationship_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/spinner_indicator_interestedin"
+                android:layout_toEndOf="@id/icon_ring"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                tools:listitem="@layout/about_me_simple_spinner_item"
+                tools:text="August 25th, 1988"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/hometown_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relationship_section"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_map_pin_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.emoji.widget.EmojiAppCompatTextView
+                    android:id="@+id/hometown_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    style="@style/Regular18"
+                    tools:text="August 25th, 1988"/>
+
+                <androidx.emoji.widget.EmojiAppCompatEditText
+                    android:id="@+id/hometown_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_vertical_margin"
+                    android:background="@null"
+                    style="@style/Regular18"
+                    android:hint="@string/user_detail_hint_city"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:textColorHint="@color/black_38"
+                    android:textCursorDrawable="@drawable/custom_cursor_drawable" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- MORE ABOUT ME -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <FrameLayout
+            android:id="@+id/more_about_me_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_edit"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/more_about_me_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="-5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/Regular16"
+                android:text="@string/done"
+                android:textColor="@color/colorAccent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/more_about_me_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/activity_margin_lg"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            style="@style/Bold18"
+            android:text="@string/more_about_me_title"/>
+
+        <include layout="@layout/profile_more_about_me"/>
+
+    </RelativeLayout>
+
+
+
+    <!-- FAMILY RELATIONSHIPS -->
+    <RelativeLayout
+        android:id="@+id/family_relationships_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <FrameLayout
+            android:id="@+id/family_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_edit"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/family_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="-5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/Regular16"
+                android:text="@string/done"
+                android:textColor="@color/colorAccent"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/family_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            style="@style/Bold18"
+            android:text="@string/family_rel_title"/>
+
+        <LinearLayout
+            android:id="@+id/family_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/family_title"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/no_family"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/activity_margin_lg"
+                android:paddingEnd="@dimen/activity_margin_lg"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/Regular16"
+                android:text="@string/no_family_relationships"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!-- LIFETIME EVENTS-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <FrameLayout
+            android:id="@+id/lifetime_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="-5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_edit"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lifetime_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="-5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/Regular16"
+                android:text="@string/done"
+                android:textColor="@color/colorAccent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/lifetime_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            style="@style/Bold18"
+            android:text="@string/lifetime_events_title"/>
+
+        <LinearLayout
+            android:id="@+id/lt_events_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lifetime_title"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/no_lt_events"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                style="@style/Regular15"
+                android:textColor="@color/black_54"
+                android:text="@string/no_lifetime_events"
+                android:gravity="center_horizontal" />
+
+            <!--<include layout="@layout/item_profile_lifetime_event"/>-->
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

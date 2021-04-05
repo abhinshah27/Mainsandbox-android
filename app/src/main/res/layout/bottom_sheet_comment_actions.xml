@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/comment_bottom_sheet_own"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="bottom"
+    android:background="@color/white_95">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_26"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/item_reply"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/comment_sheet_item_height">
+
+        <ImageView
+            android:id="@+id/icon_reply"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_comment_reply"/>
+
+        <TextView
+            android:id="@+id/text_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/icon_reply"
+            style="@style/Regular20"
+            android:text="@string/option_comment_reply" />
+
+        <include layout="@layout/custom_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/item_edit"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/comment_sheet_item_height">
+
+        <ImageView
+            android:id="@+id/icon_edit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_edit"/>
+
+        <TextView
+            android:id="@+id/text_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/icon_edit"
+            style="@style/Regular20"
+            android:text="@string/option_comment_edit" />
+
+        <include layout="@layout/custom_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/item_delete"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/comment_sheet_item_height">
+
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_trash_outline_red"/>
+
+        <TextView
+            android:id="@+id/text_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/icon_delete"
+            style="@style/Regular20"
+            android:text="@string/option_comment_delete"
+            android:textColor="@color/hl_red" />
+    </RelativeLayout>
+</LinearLayout>

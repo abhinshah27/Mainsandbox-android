@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".features.userGuide.UserGuideActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/divider_on_white"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:gravity="start|center_vertical"
+            style="@style/SemiBold18"
+            android:textColor="@color/colorAccent"
+            android:text="@string/action_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            />
+
+        <TextView
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            style="@style/SemiBold18"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/colorAccent"
+            android:text="@string/action_next"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:background="@color/colorAccent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                />
+            android:src="@drawable/user_guide_1"
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            android:src="@drawable/user_guide_2"
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            android:src="@drawable/user_guide_3"
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            android:src="@drawable/user_guide_4"
+        </FrameLayout>
+    </ViewFlipper>
+</RelativeLayout>

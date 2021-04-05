@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/share_btn">
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/RegularShadow25"
+            tools:text="Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis unde omnis iste natus error Sed ut perspiciatis un"
+            android:textColor="@color/white"
+            android:layout_gravity="top|start"/>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_round"
+        android:baselineAlignBottom="true"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/layer_close" />
+
+    <ImageView
+        android:id="@+id/share_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_round"
+        android:baselineAlignBottom="true"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/close_btn"
+        app:layout_constraintEnd_toStartOf="@+id/close_btn"
+        app:layout_constraintTop_toTopOf="@+id/close_btn"
+        app:srcCompat="@drawable/layer_share2" />
+
+
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/custom_generic_progress_indicator_small_noconstr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

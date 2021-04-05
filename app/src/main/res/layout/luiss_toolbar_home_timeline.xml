@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="?android:actionBarSize"
+                                   app:contentInsetStart="0dp"
+                                   android:background="@color/colorAccent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <FrameLayout
+            android:id="@+id/sort_click_consumer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sort_loved"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/sort"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:background="@drawable/selector_button_round"
+                app:srcCompat="@drawable/ic_filter_inactive" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/filter_click_consumer"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/filter_toggle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/selector_button_round"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/filter_click_consumer"
+            app:layout_constraintEnd_toEndOf="@id/filter_click_consumer"
+            app:layout_constraintStart_toStartOf="@id/filter_click_consumer"
+            app:layout_constraintTop_toTopOf="@id/filter_click_consumer"
+            app:srcCompat="@drawable/selector_timeline_family" />
+
+        <ImageView
+            android:id="@+id/logo_title"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_luiss_logo" />
+
+        <FrameLayout
+            android:id="@+id/sort_loved"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/sort_date"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sort_click_consumer">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="26dp"
+                android:layout_gravity="center_vertical|start"
+                android:duplicateParentState="true"
+                app:srcCompat="@drawable/selector_sort_loved" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sort_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="@+id/sort_shuffle"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sort_loved">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="26dp"
+                android:layout_gravity="center_vertical|end"
+                android:duplicateParentState="true"
+                app:srcCompat="@drawable/selector_sort_recent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sort_shuffle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sort_date">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_gravity="center_vertical|end"
+                android:duplicateParentState="true"
+                app:srcCompat="@drawable/selector_sort_shuffle" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="sort_loved,sort_date,sort_shuffle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.Toolbar>

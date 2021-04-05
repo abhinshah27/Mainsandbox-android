@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ViewersTheme"
+    android:fitsSystemWindows="false">
+
+    <View
+        android:id="@+id/placeHolderBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/divider_on_white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/placeHolder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_placeholder_image"/>
+
+
+    <ImageView
+        android:id="@+id/userWallPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:fitsSystemWindows="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+
+    <include
+        android:id="@+id/userAvatar"
+        layout="@layout/custom_layout_profile_picture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".35"/>
+
+
+    <include
+        android:id="@+id/contentVideo"
+        layout="@layout/activity_calls_content_video"
+        android:visibility="visible"/>
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/luiss_toolbar_calls_transp"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        style="@style/RegularShadow26"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="John Jones"/>
+
+    <TextView
+        android:id="@+id/callTypeView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        style="@style/RegularShadow20"
+        android:text="@string/call_type_text_voice"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/closeCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="50dp"
+        android:rotation="135"
+        app:backgroundTint="@color/hl_red"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_call_voice_white"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rejectCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_marginBottom="50dp"
+        app:backgroundTint="@color/gray_light"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/acceptCall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_close_black_54"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/acceptCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginBottom="50dp"
+        app:backgroundTint="@color/hl_green"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rejectCall"
+        app:srcCompat="@drawable/ic_call_voice_white"/>
+
+
+    <ImageView
+        android:id="@+id/actionSpeakers"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginBottom="@dimen/activity_margin_lg"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onClick"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/selector_calls_speakers"/>
+
+    <ImageView
+        android:id="@+id/actionSwitchCamera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginBottom="@dimen/activity_margin_lg"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:background="@drawable/selector_button_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_switch_camera_bck"/>
+
+
+    <ImageView
+        android:id="@+id/actionMuteMic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/activity_margin_lg"
+        android:layout_marginBottom="@dimen/activity_margin_lg"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onClick"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/selector_calls_mute"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupPlaceHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="placeHolder,placeHolderBackground"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="actionSwitchCamera,contentVideo"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupIncomingCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="rejectCall,acceptCall"/>
+
+    <!--<androidx.constraintlayout.widget.Group-->
+        <!--android:id="@+id/groupHiddenWhenVideo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:constraint_referenced_ids="actionMuteMic,actionSwitchCamera,closeCall,callTypeView,userName,toolbar"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

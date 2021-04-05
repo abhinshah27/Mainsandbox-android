@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        style="@style/Regular20"
+        android:gravity="start"
+        android:textColor="@color/colorAccent"
+        android:text="@string/settings_security_delete_account"/>
+
+    <TextView
+        android:id="@+id/btn_delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        style="@style/SemiBold18"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:text="@string/action_delete_account"
+        android:background="@drawable/selector_delete_account"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_above="@id/btn_delete_account"
+        style="@style/ScrollbarStyle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin_lg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin"
+                style="@style/Regular16"
+                android:gravity="start"
+                android:text="@string/delete_account_et_txt"
+                />
+
+            <androidx.emoji.widget.EmojiAppCompatEditText
+                android:id="@+id/reason_message"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="@dimen/activity_margin_lg"
+                android:background="@drawable/shape_rectangle_rounded_border"
+                style="@style/Regular16"
+                android:gravity="top"
+                android:hint="@string/action_email_message"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="12dp"
+                android:textColorHint="@color/black_38" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SemiBold16"
+                android:gravity="start"
+                android:text="@string/delete_account_sure"
+                />
+
+            <include layout="@layout/layout_custom_checkbox_delete_account"
+                     android:id="@+id/checkbox_sure"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="@dimen/activity_margin_lg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SemiBold16"
+                android:gravity="start"
+                android:textAllCaps="true"
+                android:text="@string/delete_account_hearts"
+                />
+
+            <include layout="@layout/layout_custom_checkbox_delete_account"
+                     android:id="@+id/checkbox_hearts"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

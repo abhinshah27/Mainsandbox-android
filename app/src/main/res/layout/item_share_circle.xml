@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:background="@color/transparent"
+    >
+
+    <FrameLayout
+        android:id="@+id/super_container"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_circle_share"
+            >
+
+            <RelativeLayout
+                android:id="@+id/bundle_picture_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <include layout="@layout/custom_layout_profile_picture"
+                         android:id="@+id/bundle_1"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                    />
+
+                <include layout="@layout/custom_layout_profile_picture"
+                         android:id="@+id/bundle_2"
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:layout_marginStart="10dp"
+                         android:layout_toEndOf="@id/bundle_1"/>
+
+                <LinearLayout
+                    android:id="@+id/container_3_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bundle_1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true">
+
+                    <include layout="@layout/custom_layout_profile_picture"
+                             android:id="@+id/bundle_3"
+                             android:layout_width="25dp"
+                             android:layout_height="25dp"
+                             android:visibility="invisible"/>
+
+                    <include layout="@layout/custom_layout_profile_picture"
+                             android:id="@+id/bundle_4"
+                             android:layout_width="25dp"
+                             android:layout_height="25dp"
+                             android:layout_marginStart="10dp"
+                             android:visibility="invisible"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/single_picture_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:visibility="invisible"
+                >
+
+                <include layout="@layout/custom_layout_profile_picture"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/share_selection_overlay"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@id/super_container"
+        style="@style/Bold14"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textAlignment="center"
+        tools:text="Inner Circle"/>
+
+</RelativeLayout>

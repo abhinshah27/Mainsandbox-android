@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:animateLayoutChanges="true"
+              android:paddingTop="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@drawable/selector_background_settings_item"
+        android:weightSum="1"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".70"
+            android:layout_marginStart="@dimen/activity_margin_lg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/Regular18"
+                android:gravity="start"
+                tools:text="Your action here"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Regular12"
+                android:gravity="start"
+                tools:text="@string/settings_security_lct_2step_mess"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/switch_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:layout_gravity="center_vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/item_switch"
+                style="@style/SwitchCompatStyleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_hideable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_gravity="center_horizontal">
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/inactivity_era"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_marginStart="10dp"
+                android:scaleY=".8"
+                android:scaleX=".8"
+                app:np_fadingEdgeEnabled="true"
+                app:np_textColor="@color/colorAccent"
+                app:np_selectedTextColor="@color/colorAccent"
+                app:np_dividerColor="@color/colorAccent"
+                app:np_min="0"
+                app:np_max="4"
+                app:np_scrollerEnabled="true"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/inactivity_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_marginEnd="10dp"
+                android:scaleY=".8"
+                android:scaleX=".8"
+                app:np_fadingEdgeEnabled="true"
+                app:np_textColor="@color/colorAccent"
+                app:np_selectedTextColor="@color/colorAccent"
+                app:np_dividerColor="@color/colorAccent"
+                app:np_min="0"
+                app:np_max="23"
+                app:np_scrollerEnabled="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inactivity_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            style="@style/Regular16"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:text="@string/inactivity_period"
+            android:duplicateParentState="true" />
+
+        <include layout="@layout/custom_divider"/>
+
+    </LinearLayout>
+</LinearLayout>

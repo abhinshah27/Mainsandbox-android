@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_circle_black"
+        android:top="@dimen/ic_inset_shadow"
+          android:left="@dimen/ic_inset_shadow"
+        />
+
+    <item
+        android:bottom="@dimen/ic_inset_shadow"
+          android:right="@dimen/ic_inset_shadow">
+
+        <layer-list>
+            <item android:drawable="@drawable/shape_circle_orange"/>
+            <item android:drawable="@drawable/ic_hl_symbol"
+                android:top="10dp"
+                android:bottom="10dp"
+                android:right="10dp"
+                android:left="10dp"
+                android:gravity="center"
+                android:height="36dp"
+                android:width="36dp"/>
+        </layer-list>
+
+    </item>
+</layer-list>

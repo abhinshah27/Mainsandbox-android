@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginBottom="10dp"
+        style="@style/Regular20"
+        android:text="@string/settings_help_contact"
+        android:textColor="@color/colorAccent" />
+
+    <HorizontalScrollView
+        android:id="@+id/tabs_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <FrameLayout
+                android:id="@+id/help_tab_support"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/interest_custom_min_width"
+                android:paddingStart="12dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/tab_support_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    style="@style/Regular18"
+                    android:text="@string/tab_help_support"
+                    android:textColor="@color/state_list_custom_tab"
+                    android:background="@drawable/background_custom_tab"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/help_tab_press"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/settings_help_custom_min_width"
+                android:paddingEnd="8dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tab_press_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    style="@style/Regular18"
+                    android:text="@string/tab_help_press"
+                    android:textColor="@color/state_list_custom_tab"
+                    android:background="@drawable/background_custom_tab"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/help_tab_joinus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="@dimen/interest_custom_min_width"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/tab_joinus_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    style="@style/Regular18"
+                    android:text="@string/tab_help_joinus"
+                    android:textColor="@color/state_list_custom_tab"
+                    android:background="@drawable/background_custom_tab" />
+            </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <ListView
+            android:id="@+id/base_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ScrollbarStyle"
+            android:divider="@null"
+            tools:listitem="@layout/item_settings_entry"/>
+
+        <ScrollView
+            android:id="@+id/layout_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/ScrollbarStyle">
+
+            <TextView
+                android:id="@+id/custom_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_margin_lg"
+                style="@style/Regular16"
+                android:autoLink="email"/>
+
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

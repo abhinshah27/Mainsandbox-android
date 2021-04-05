@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/gray_light"
+    android:orientation="vertical">
+
+    <include layout="@layout/profile_search_box_mini"
+        android:id="@+id/search_box"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        style="@style/ScrollbarStyle">
+
+        <LinearLayout
+            android:id="@+id/rvs_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_list_people"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tag_people_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".28"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    style="@style/Regular16"
+                    android:text="@string/tag_section_followers" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".72">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tag_rv_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/no_result_tag_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        style="@style/Regular14"
+                        android:textColor="@color/black_54"
+                        android:text="@string/no_people_in_ic_short" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_list_interests"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".28"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    style="@style/Regular16"
+                    android:text="@string/tag_section_interests" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight=".72">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tag_rv_interests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/no_result_tag_interests"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        style="@style/Regular14"
+                        android:textColor="@color/black_54"
+                        android:text="@string/no_interest_short" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

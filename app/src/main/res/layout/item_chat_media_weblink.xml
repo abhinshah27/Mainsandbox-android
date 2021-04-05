@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupIncoming"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="profileIncoming,infoFooterIncoming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupOutgoing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="profileOutgoing,infoFooterOutgoing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+
+    <TextView
+        android:id="@+id/dateHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_md"
+        style="@style/Regular14"
+        android:textColor="@color/black_54"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/placeHolderBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        tools:text="Tues, 09 Oct, 14:27" />
+
+    <View
+        android:id="@+id/placeHolderBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/divider_on_white"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintBottom_toTopOf="@id/infoFooterIncoming"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader"/>
+
+    <ImageView
+        android:id="@+id/placeHolder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/placeHolderBackground"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/placeHolderBackground"
+        app:layout_constraintStart_toStartOf="@+id/placeHolderBackground"
+        app:layout_constraintTop_toTopOf="@+id/placeHolderBackground"
+        app:srcCompat="@drawable/ic_placeholder_image"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/placeHolderBackground"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/placeHolderBackground"
+        app:layout_constraintStart_toStartOf="@+id/placeHolderBackground"
+        app:layout_constraintTop_toTopOf="@+id/placeHolderBackground"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+    <include
+        android:id="@+id/profileOutgoing"
+        layout="@layout/custom_layout_profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <include
+        android:id="@+id/profileIncoming"
+        layout="@layout/custom_layout_profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/infoFooterIncoming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="2dp"
+        style="@style/Regular12"
+        android:textAlignment="textStart"
+        android:textColor="@color/black_54"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageIncoming"
+        tools:text="Read, Tues 09 Oct, 14:33" />
+
+    <TextView
+        android:id="@+id/infoFooterOutgoing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        style="@style/Regular12"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black_54"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageOutgoing"
+        tools:text="Read, Tues 09 Oct, 14:33" />
+
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/messageIncoming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/background_chat_incoming_last"
+        android:padding="10dp"
+        style="@style/Regular16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/infoFooterIncoming"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeHolderBackground"
+        tools:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" />
+
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/messageOutgoing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_chat_outgoing_last"
+        android:padding="10dp"
+        style="@style/Regular16"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/infoFooterOutgoing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeHolderBackground"
+        tools:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" />
+
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/weblinkTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        style="@style/SemiBoldShadow18"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/weblinkSource"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna " />
+
+    <ImageView
+        android:id="@+id/weblinkIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/layer_weblink" />
+
+    <TextView
+        android:id="@+id/weblinkSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        style="@style/RegularShadow16"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/weblinkIcon"
+        app:layout_constraintStart_toEndOf="@+id/weblinkIcon"
+        app:layout_constraintTop_toTopOf="@+id/weblinkIcon"
+        tools:text="the guardian" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

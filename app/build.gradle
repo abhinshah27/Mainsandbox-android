@@ -1,0 +1,278 @@
+import com.google.gms.googleservices.GoogleServicesPlugin
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion "${versions.buildTools}"
+
+    defaultConfig {
+        applicationId "it.keybiz.lbsapp.corporate"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode 10050
+        versionName project.baseVersionName + ""        // for development versionName fill into the quot. marks
+//        versionName "2019.02.27-demo"                 // to handle DEMOs build versionName with yyyy.MM.dd-demo(.x)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
+
+        buildConfigField "String", "BASE_VERSION_NAME", project.baseVersionNameStr
+    }
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            applicationIdSuffix ".dev"
+            versionNameSuffix ".dev"
+            minifyEnabled false
+            // line kept for test purposes
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            aaptOptions.cruncherEnabled = false
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    // Specifies two flavor dimensions.
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            minSdkVersion 19
+            buildConfigField "boolean", "USE_CRASHLYTICS", "false"
+            buildConfigField "boolean", "USE_PROD_CONNECTION", "false"
+            dimension "default"
+        }
+        prod {
+            minSdkVersion 19
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "boolean", "USE_PROD_CONNECTION", "true"
+            dimension "default"
+        }
+        prodNoCrash {
+            minSdkVersion 19
+            buildConfigField "boolean", "USE_CRASHLYTICS", "false"
+            buildConfigField "boolean", "USE_PROD_CONNECTION", "true"
+            dimension "default"
+        }
+        devCrash {
+            minSdkVersion 19
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField "boolean", "USE_PROD_CONNECTION", "false"
+            ext.alwaysUpdateBuildId = false
+            dimension "default"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        preDexLibraries true
+        javaMaxHeapSize "2g"
+    }
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+        density {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+        abi {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+    }
+
+    // Specify that we want to split up the APK based on ABI
+    splits {
+        abi {
+            // Enable ABI split
+            enable true
+
+            // Clear list of ABIs
+            reset()
+
+            // Specify each architecture currently supported by the Video SDK
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+
+            // Specify that we do want an additional universal SDK
+            universalApk true
+        }
+    }
+
+    // Overrides packaging options removing MIPS native libs from app
+    packagingOptions {
+        exclude "lib/mips/librealm-jni.so"
+        exclude "lib/mips/libRSSupport.so"
+        exclude "lib/mips/librsjni.so"
+    }
+
+    GoogleServicesPlugin.config.disableVersionCheck = true
+
+    ext.betaDistributionApkFilePath = "/Users/mbaldrighi/AndroidStudioProjects/HL_LUISS/app/build/outputs/apk/devCrash/debug/app-devCrash-universal-debug.apk"
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+
+    maven { url 'https://maven.google.com' }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+ext {
+    // below: other dependencies' versions maybe
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Dependency on a local library module
+    implementation project(":videocompressor")
+
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-beta02', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    })
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
+    implementation "androidx.gridlayout:gridlayout:1.0.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "com.google.android.material:material:1.0.0"
+    implementation "androidx.vectordrawable:vectordrawable:1.0.1"
+    implementation "androidx.core:core:1.0.1"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.legacy:legacy-support-v13:1.0.0"
+    implementation "androidx.emoji:emoji-appcompat:1.0.0"
+    implementation "androidx.exifinterface:exifinterface:1.0.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+
+    /* Firebase */
+    implementation "com.google.firebase:firebase-core:16.0.8"
+    implementation "com.google.firebase:firebase-analytics:16.4.0"
+    implementation "com.google.firebase:firebase-messaging:17.6.0"
+
+    /* PlayServices */
+    implementation 'com.google.android.gms:play-services-base:16.1.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    /*Java 8 backport */
+    implementation 'com.annimon:stream:1.2.1'
+
+    /* Gson */
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    /* WebSocket */
+    implementation 'com.neovisionaries:nv-websocket-client:2.7'
+
+    /* HTTP */
+    implementation 'com.squareup.okhttp3:okhttp:3.14.0'
+
+    /* Imaging */
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'androidx.annotation:annotation:1.0.2'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    /* Bottom sheet */
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    /* Lottie Lib for audio wave animation*/
+    implementation 'com.airbnb.android:lottie:2.8.0'
+
+    /* Dialogs */
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation('com.wdullaer:materialdatetimepicker:4.1.0') {
+        exclude group: 'androidx.appcompat'
+    }
+
+    /* Number picker */
+    implementation 'com.shawnlin:number-picker:2.4.8'
+
+    /* Country code picker */
+    implementation 'com.hbb20:ccp:2.2.5'
+
+    /* Fabric */
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+        transitive = true
+    }
+
+    /* Anko Commons */
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:${versions.kotlin}"
+
+    /* Video management */
+    implementation ("im.ene.toro3:toro-ext-exoplayer:${versions.toro}") {
+        exclude group: 'com.google.android.gms'     // due to error in compilation
+    }
+
+    // conflicts between Toro and ExoPlayer direct dependency. Comment ExoPlayer.
+//    implementation "com.google.android.exoplayer:exoplayer-core:${versions.exoPlayer}"
+//    implementation "com.google.android.exoplayer:exoplayer-ui:${versions.exoPlayer}"
+
+    /* Realm adapters */
+    implementation 'io.realm:android-adapters:3.1.0'
+
+    /* Twilio */
+    // INFO:   not updating due to necessary refactoring
+    implementation 'com.twilio:video-android:3.2.1'
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+googleServices { disableVersionCheck = false }

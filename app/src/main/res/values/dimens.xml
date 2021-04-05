@@ -1,0 +1,76 @@
+<!--
+  ~ Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  ~ Proprietary and confidential.
+  -->
+
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="activity_margin_lg">20dp</dimen>
+    <dimen name="activity_margin_md">8dp</dimen>
+
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_height_lg">70dp</dimen>
+    <dimen name="logo_height">20dp</dimen>
+    <dimen name="logo_width">220dp</dimen>
+    <dimen name="logo_height_login">35dp</dimen>
+    <dimen name="logo_width_login">250dp</dimen>
+    <dimen name="bottom_bar_height">48dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="mask_interactions_section_height">55dp</dimen>
+    <dimen name="comment_sheet_item_height">60dp</dimen>
+
+    <dimen name="custom_card_profile_height">360dp</dimen>
+
+    <dimen name="diary_card_width">130dp</dimen>
+    <dimen name="diary_card_height">210dp</dimen>
+    <dimen name="diary_card_corners">4dp</dimen>
+
+    <dimen name="diary_card_width_mini">40dp</dimen>
+    <dimen name="diary_card_height_mini">65dp</dimen>
+    <dimen name="diary_card_corners_mini">2dp</dimen>
+
+    <dimen name="small_interest_tile">85dp</dimen>
+
+    <dimen name="post_placeholder_image_size">100dp</dimen>
+
+
+    <dimen name="interest_basic_info_height">150dp</dimen>
+    <dimen name="interest_basic_info_height_mini">120dp</dimen>
+
+    <dimen name="interest_custom_min_width">140dp</dimen>
+    <dimen name="settings_help_custom_min_width">150dp</dimen>
+
+    <dimen name="wish_navigation_progress_bar">50dp</dimen>
+
+
+    <dimen name="create_post_actions_bar_height">65dp</dimen>
+    <dimen name="create_post_media_panel_height">275dp</dimen>
+    <dimen name="create_post_preview_panel_height_no_bar">150dp</dimen>
+    <dimen name="custom_gallery_card_height">@dimen/create_post_media_panel_height</dimen>
+    <dimen name="custom_gallery_card_width">140dp</dimen>
+    <dimen name="cpost_tag_search_rv_height">130dp</dimen>
+    <dimen name="search_layout_height">70dp</dimen>
+
+    <item name="weight_4" format="float" type="dimen">.25</item>
+    <item name="wish_step_weight_5" format="float" type="dimen">.2</item>
+    <item name="wish_step_weight_6" format="float" type="dimen">.16666666666</item>
+
+    <item name="btn_profile_weight_me_show" format="float" type="dimen">.333333333333</item>
+    <item name="btn_profile_weight_me_no" format="float" type="dimen">.5</item>
+    <item name="btn_profile_weight_nfriend_show" format="float" type="dimen">.5</item>
+    <item name="btn_profile_weight_nfriend_no" format="float" type="dimen">1</item>
+
+
+    <dimen name="ic_inset_shadow">1dp</dimen>
+
+    <dimen name="item_chat_corner_radius">15dp</dimen>
+
+    <dimen name="item_cpost_color_circle_size">40dp</dimen>
+    <dimen name="item_cpost_color_inset_icon">12dp</dimen>
+
+</resources>

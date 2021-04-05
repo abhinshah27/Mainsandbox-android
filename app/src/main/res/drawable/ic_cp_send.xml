@@ -1,0 +1,24 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="83dp"
+        android:height="83dp"
+        android:viewportWidth="83.0"
+        android:viewportHeight="83.0">
+    <path
+        android:pathData="M41.51,41.51m-39.51,0a39.51,39.51 0,1 1,79.01 0a39.51,39.51 0,1 1,-79.01 0"
+        android:fillType="evenOdd"
+        android:strokeColor="@color/colorAccent"
+        android:fillColor="@color/colorAccent"
+        android:strokeWidth="3"/>
+    <path
+        android:pathData="M22.94,58.49L40.15,50.81C40.15,50.81 41.2,39.35 42.16,39.37C43.12,39.39 43.63,50.81 43.63,50.81L60.69,59.15L42.52,18.31L22.94,58.49Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="1"/>
+</vector>

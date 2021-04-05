@@ -1,0 +1,222 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:application="it.keybiz.lbsapp.corporate.features.profile.ProfileFragment"
+    android:background="@color/divider_on_white">
+
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <!-- BLACK ALPHA LAYER -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_10"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/luiss_toolbar_home_profile"
+            android:id="@+id/toolbar_1"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:fitsSystemWindows="true"
+            android:visibility="visible"/>
+
+        <include layout="@layout/luiss_toolbar_home_profile_others"
+            android:id="@+id/toolbar_2"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"/>
+
+        <include layout="@layout/luiss_bottom_bar"
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/layout_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_above="@id/bottom_bar">
+
+            <LinearLayout
+                android:id="@+id/screen_selection_not_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/not_friend_diary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/profile_diary_not_friend"
+                    android:background="@drawable/selector_profile_button"/>
+
+                <TextView
+                    android:id="@+id/not_friend_inner_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight=".5"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/profile_card_network"
+                    android:visibility="gone"
+                    android:background="@drawable/selector_profile_button"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/screen_selection_me_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/me_friend_diary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/profile_diary_me"
+                    android:background="@drawable/selector_profile_button"/>
+
+                <TextView
+                    android:id="@+id/me_friend_inner_C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/profile_card_network"
+                    android:background="@drawable/selector_profile_button"/>
+
+                <TextView
+                    android:id="@+id/me_friend_inner_interests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/interests"
+                    android:background="@drawable/selector_profile_button"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/screen_selection_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/interest_diary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/profile_diary_friend"
+                    android:background="@drawable/selector_profile_button" />
+
+                <TextView
+                    android:id="@+id/interest_followers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/interest_followers"
+                    android:background="@drawable/selector_profile_button"/>
+
+                <TextView
+                    android:id="@+id/interest_promotions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    style="@style/SemiBoldShadow18"
+                    android:textColor="@color/white"
+                    android:text="@string/interest_promotions"
+                    android:background="@drawable/selector_profile_button"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/custom_card_profile"
+            android:id="@+id/card_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/toolbar_height_lg"
+            android:layout_above="@id/layout_options"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            />
+
+        <include layout="@layout/custom_card_interest"
+            android:id="@+id/card_interest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/toolbar_height_lg"
+            android:layout_above="@id/layout_options"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</FrameLayout>

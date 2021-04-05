@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<paths>
+    <!-- sets path for temporary files like media -->
+    <external-path name="luiss_bscorp_temps" path="Android/data/it.keybiz.lbsapp.corporate/files/tmp"/>
+
+    <!-- sets path for files found in Download dir -->
+    <external-path name="Downloads" path="Download/"/>
+</paths>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="@dimen/activity_margin"
+        android:background="@color/transparent"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/custom_layout_profile_picture"
+                 android:id="@+id/user_profile_pic"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:id="@+id/buttons_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|start"
+            android:layout_alignParentEnd="true">
+
+            <FrameLayout
+                android:id="@+id/heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_button_post_mask"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/heart_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/background_interaction_item_comment_accent"
+                    android:duplicateParentState="true"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/horizontal_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/background_button_post_mask"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_more"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_toEndOf="@id/user_profile_pic"
+            android:layout_toStartOf="@id/buttons_sec">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Bold16"
+                tools:text="username"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <androidx.emoji.widget.EmojiAppCompatTextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                style="@style/Regular18"
+                tools:text="usernameusernameusernameusernameusernameusernameusernameusernameusernameusernameusernameusernameusername" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/comment_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Bold14"
+                    tools:text="2hrs. 24 Hearts"/>
+
+                <TextView
+                    android:id="@+id/reply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    style="@style/Bold14"
+                    android:text="@string/reply_to_comment"
+                    android:textColor="@color/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sub_comment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/comment"
+            android:visibility="gone">
+
+            <include layout="@layout/custom_divider"
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+        android:id="@+id/divider"/>
+</LinearLayout>

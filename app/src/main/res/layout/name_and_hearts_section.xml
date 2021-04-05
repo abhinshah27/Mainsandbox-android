@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/about_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginEnd="@dimen/activity_margin_lg"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        style="@style/Bold18"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textAlignment="gravity"
+        android:textColor="@color/black_54"
+        android:textStyle="italic"
+        android:visibility="visible"
+        tools:text="not defined yet" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Bold20"
+        tools:text="Joanne Smith"/>
+
+    <TextView
+        android:id="@+id/invite_to_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        style="@style/Bold20"
+        android:text="@string/invite_to_inner_circle"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/hearts_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/hearts_total_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_wishes_button_black"/>
+
+            <TextView
+                android:id="@+id/count_heart_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-1dp"
+                style="@style/Bold18"
+                tools:text="3564"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hearts_avail_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_remaining_hearts_orange"/>
+
+            <TextView
+                android:id="@+id/count_heart_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-1dp"
+                style="@style/Bold18"
+                tools:text="3564"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

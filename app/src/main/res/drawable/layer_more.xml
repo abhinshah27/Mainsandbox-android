@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_more_black"
+        android:top="@dimen/ic_inset_shadow"
+          android:left="@dimen/ic_inset_shadow"
+        />
+
+    <item android:drawable="@drawable/ic_more_white"
+        android:bottom="@dimen/ic_inset_shadow"
+        android:right="@dimen/ic_inset_shadow"/>
+</layer-list>

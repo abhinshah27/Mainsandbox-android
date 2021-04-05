@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ScrollbarStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/layout_photo_profile"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight=".5"
+                android:background="@drawable/shape_rectangle_rounded_border"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    style="@style/Regular18"
+                    android:text="@string/settings_profile_photo"
+                    android:textColor="@color/colorAccent" />
+
+                <include
+                    android:id="@+id/profile_photo"
+                    layout="@layout/custom_layout_profile_picture_gray_border"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/activity_margin"/>
+
+                <TextView
+                    android:id="@+id/txt_change_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    style="@style/Regular16"
+                    android:text="@string/action_change"
+                    android:textColor="@color/black_38" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_photo_cover"
+                android:layout_width="0dp"
+                android:layout_height="190dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight=".5"
+                android:background="@drawable/shape_rectangle_rounded_border"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    style="@style/Regular18"
+                    android:text="@string/settings_cover_photo"
+                    android:textColor="@color/colorAccent" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleY="1.2"
+                    android:scaleX="1.2"
+                    android:background="@drawable/shape_rectangle_border_light">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_placeholder_image"/>
+
+                    <ImageView
+                        android:id="@+id/cover_photo"
+                        android:layout_width="@dimen/diary_card_width_mini"
+                        android:layout_height="@dimen/diary_card_height_mini"
+                        android:layout_margin="1dp"
+                        android:background="@color/divider_on_white"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_change_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    style="@style/Regular16"
+                    android:text="@string/action_change"
+                    android:textColor="@color/black_38" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signup_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_lg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:baselineAligned="false">
+
+                <include layout="@layout/custom_edit_text"
+                         android:id="@+id/first_name"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight=".5"
+                         android:layout_marginEnd="10dp"/>
+
+                <include layout="@layout/custom_edit_text"
+                         android:id="@+id/last_name"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight=".5"
+                         android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+            <include layout="@layout/custom_edit_text"
+                     android:id="@+id/settings_email"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                     android:inputType="textEmailAddress"/>
+
+            <include layout="@layout/custom_edit_text"
+                     android:id="@+id/mobile"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="10dp"
+                     android:imeOptions="actionDone"
+                     android:imeActionLabel="@string/go"
+                     android:inputType="phone"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/shape_rectangle_border"
+            style="@style/Regular18"
+            android:text="@string/settings_change_pwd"
+            android:textAllCaps="false"
+            android:textColor="@color/black_70" />
+
+    </LinearLayout>
+</ScrollView>

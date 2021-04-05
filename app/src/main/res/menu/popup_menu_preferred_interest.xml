@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/interest_prefer"
+        android:title="@string/action_prefer_interest"/>
+
+    <item android:id="@+id/interest_unprefer"
+        android:title="@string/action_unprefer_interest"/>
+
+    <!-- INFO: 2/14/19    Luiss disables claim -->
+    <item android:id="@+id/interest_claim"
+        android:title="@string/interest_action_claim"
+        android:visible="false"/>
+
+</menu>

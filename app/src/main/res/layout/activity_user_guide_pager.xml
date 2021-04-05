@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/root_content"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".features.userGuide.UserGuideActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@color/divider_on_white"
+        android:weightSum="1"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@drawable/selector_guide_button"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:id="@+id/btn_back_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                style="@style/SemiBold18"
+                android:textColor="@color/colorAccent"
+                android:text="@string/action_back"
+                android:drawableStart="@drawable/ic_signup_left_indicator"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/colorAccent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:background="@drawable/selector_guide_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick">
+
+            <TextView
+                android:id="@+id/btn_next_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                style="@style/SemiBold18"
+                android:textColor="@color/state_list_guide_button"
+                android:text="@string/action_next"
+                android:drawableEnd="@drawable/ic_signup_right_indicator"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/colorAccent"
+                android:duplicateParentState="true"
+                />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

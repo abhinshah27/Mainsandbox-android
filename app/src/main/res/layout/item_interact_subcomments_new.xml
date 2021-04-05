@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="64dp"
+    android:paddingTop="@dimen/activity_margin"
+    android:paddingEnd="@dimen/activity_margin_md"
+    tools:background="@color/black_12">
+
+    <include
+        android:id="@+id/user_profile_pic"
+        layout="@layout/custom_layout_profile_picture_star"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_md"
+        android:layout_marginEnd="@dimen/activity_margin_md"
+        android:ellipsize="end"
+        style="@style/Regular13"
+        android:maxLines="1"
+        android:textColor="@color/black_70"
+        app:layout_constraintEnd_toStartOf="@+id/like_btn"
+        app:layout_constraintStart_toEndOf="@id/user_profile_pic"
+        app:layout_constraintTop_toTopOf="@id/user_profile_pic"
+        tools:text="username" />
+
+    <FrameLayout
+        android:id="@+id/like_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_round"
+        android:padding="@dimen/activity_margin_md"
+        app:layout_constraintBottom_toBottomOf="@id/text"
+        app:layout_constraintEnd_toStartOf="@id/reply_btn"
+        app:layout_constraintTop_toTopOf="@id/text">
+
+        <!-- TODO: 2019-05-20    add selector for LIKED -->
+        <ImageView
+            android:id="@+id/heart_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:duplicateParentState="true"
+            app:srcCompat="@drawable/ic_heart_large_full_btn" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/reply_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_round"
+        android:padding="@dimen/activity_margin_md"
+        app:layout_constraintBottom_toBottomOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text">
+
+        <!-- TODO: 2019-05-20    add selector for REPLIED (?) -->
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:duplicateParentState="true"
+            app:srcCompat="@drawable/ic_comment_btn" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/comment_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Regular12"
+        android:textColor="@color/black_70"
+        app:layout_constraintEnd_toEndOf="@+id/user_name"
+        app:layout_constraintStart_toStartOf="@id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        tools:text="Piace a 43 persone" />
+
+    <!--<View-->
+    <!--android:id="@+id/textBackground"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/shape_rectangle_rounded_grey_md_interactions"-->
+    <!--app:layout_constraintStart_toStartOf="@id/user_name"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/like_btn"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/user_name"-->
+    <!--tools:layout_constraintStart_toStartOf="@id/user_name" />-->
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_rounded_grey_md_interactions"
+        android:paddingStart="5dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="3dp"
+        style="@style/Regular13"
+        app:layout_constraintEnd_toEndOf="@+id/user_name"
+        app:layout_constraintStart_toStartOf="@id/user_name"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:layout_constraintStart_toStartOf="@id/user_name"
+        tools:text="La sperimentazione è già in corso" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

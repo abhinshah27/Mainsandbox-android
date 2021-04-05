@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="?android:actionBarSize"
+                                   app:contentInsetStart="0dp"
+                                   android:background="@color/colorAccent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <FrameLayout
+            android:id="@+id/notification_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin_md"
+            android:layout_marginStart="@dimen/activity_margin_md"
+            android:background="@drawable/selector_button_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/notifications_btn"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/notification_btn_layout"
+                app:layout_constraintEnd_toEndOf="@+id/notification_btn_layout"
+                app:layout_constraintStart_toStartOf="@+id/notification_btn_layout"
+                app:layout_constraintTop_toTopOf="@+id/notification_btn_layout"
+                app:srcCompat="@drawable/layer_notifications" />
+
+            <View
+                android:id="@+id/notification_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/layer_notifications_badge"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/settings_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin_md"
+            android:layout_marginEnd="@dimen/activity_margin_md"
+            android:background="@drawable/selector_button_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/layer_settings"
+                app:layout_constraintBottom_toBottomOf="@+id/settings_btn"
+                app:layout_constraintEnd_toEndOf="@+id/settings_btn"
+                app:layout_constraintStart_toStartOf="@+id/settings_btn"
+                app:layout_constraintTop_toTopOf="@+id/settings_btn"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/logoTitle"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_luiss_logo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.Toolbar>

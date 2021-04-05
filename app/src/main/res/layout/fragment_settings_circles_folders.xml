@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/btn_add_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_margin_lg"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        style="@style/SemiBold18"
+        android:gravity="start"
+        android:textColor="@color/white"
+        android:text="@string/settings_circles_add"
+        android:duplicateParentState="true"
+        android:background="@color/colorAccent"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginBottom="10dp"
+        style="@style/Regular18"
+        android:gravity="start"
+        android:textColor="@color/colorAccent"
+        android:text="@string/settings_ic_circles"
+        android:visibility="gone" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_above="@id/btn_add_new">
+
+        <ListView
+            android:id="@+id/circles_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            tools:listitem="@layout/item_settings_circle_folder"
+            style="@style/ScrollbarStyle"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/no_result"
+        style="@style/NoResultStyle"
+        android:text="@string/no_result_list"
+        android:visibility="visible"/>
+
+</RelativeLayout>

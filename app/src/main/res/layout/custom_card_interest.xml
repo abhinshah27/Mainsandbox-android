@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp"
+    card_view:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lower_section"
+            layout="@layout/interest_basic_info_layout_round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/lower_section"
+            android:background="@drawable/background_rounded_2_top">
+
+            <ImageView
+                android:id="@+id/wall_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_rounded_2_top"
+                android:scaleType="centerCrop"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <include
+                    android:id="@+id/interest_profile_picture"
+                    layout="@layout/custom_layout_profile_picture"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignEnd="@+id/claim_status"
+                    android:layout_alignStart="@+id/claim_status"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/claim_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/interest_profile_picture"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    style="@style/BoldShadow16"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:maxLines="2"
+                    android:text="@string/interest_claim_pending"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="visible"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/follow_unfollow_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                style="@style/BoldShadow18"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                tools:text="Follow"
+                />
+
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

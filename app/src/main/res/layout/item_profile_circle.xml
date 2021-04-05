@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inner_circle_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/circle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        style="@style/SemiBold20"
+        tools:text="Inner Circle (12,425)"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_gravity="fill_horizontal"
+            app:orientation="horizontal"
+            app:columnCount="4"
+            app:alignmentMode="alignMargins"
+            app:useDefaultMargins="true"/>
+
+        <TextView
+            android:id="@+id/no_result"
+            style="@style/NoResultStyle"
+            android:paddingTop="20dp"
+            android:text="@string/no_member_in_circle"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/view_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/Regular15"
+        android:text="@string/view_more"
+        android:textColor="@color/black_70"/>
+
+</LinearLayout>

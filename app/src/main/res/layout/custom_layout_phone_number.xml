@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<!-- TODO:  return here if needed -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:weightSum="1"
+              android:baselineAligned="false">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".35"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="start|center_vertical"
+            app:ccp_countryPreference="US"
+            app:ccp_defaultNameCode="US"
+            app:ccp_showFlag="true"
+            app:ccp_showFullName="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textGravity="LEFT"
+            app:ccp_textSize="18sp"
+            app:ccpDialog_textColor="@color/black_87"
+            app:ccpDialog_allowSearch="true"
+            app:ccpDialog_keyboardAutoPopup="true"
+            app:ccpDialog_backgroundColor="@color/white"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccp_countryAutoDetectionPref="LOCALE_SIM_NETWORK"/>
+
+        <include layout="@layout/custom_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight=".65"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:hint="@string/prompt_mobile"
+            style="@style/Regular18"
+            tools:text="blablablablabl"
+            tools:drawableEnd="@drawable/ic_tick_green_small"
+            android:drawablePadding="5dp"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:imeOptions="actionDone"
+            android:imeActionLabel="@string/go"
+            android:inputType="phone"
+            android:maxLines="1" />
+
+        <include layout="@layout/custom_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

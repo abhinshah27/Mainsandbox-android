@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.createPost.CreatePostActivityMod">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/custom_gallery_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="center"
+        style="@style/Regular14"
+        android:textAlignment="center"
+        android:text="Please, for now access the media files from the system gallery by tapping the button below."
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/gallery_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_gravity="bottom|start"
+        android:focusable="true"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_gallery_system"/>
+
+</FrameLayout>

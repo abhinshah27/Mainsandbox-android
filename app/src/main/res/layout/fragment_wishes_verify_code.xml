@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:paddingStart="@dimen/activity_vertical_margin"
+             android:paddingEnd="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-20dp"
+        android:orientation="vertical"
+        android:alpha="1">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Bold28"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            tools:text="@string/wish_verification_success"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:id="@+id/retry_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_gravity="center_horizontal"
+            style="@style/LoginButtonStyle"
+            android:text="@string/action_retry"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:alpha="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            style="@style/SemiBold24"
+            android:text="@string/wish_verify_code"/>
+
+        <TextView
+            android:id="@+id/phone_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Bold40"
+            android:textAlignment="center"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:text="@string/big_dash"/>
+
+    </LinearLayout>
+</FrameLayout>

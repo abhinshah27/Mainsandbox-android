@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:layout_width="@dimen/diary_card_width"
+                                   android:layout_height="@dimen/diary_card_height"
+                                   android:layout_marginEnd="10dp"
+                                   app:cardCornerRadius="@dimen/diary_card_corners"
+                                   app:cardElevation="1dp"
+                                   app:cardUseCompatPadding="false"
+                                   app:cardBackgroundColor="@color/divider_on_white"
+                                   app:cardPreventCornerOverlap="false">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_placeholder_image"/>
+
+    <ImageView
+        android:id="@+id/post_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/background_rounded_4_sm"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_rounded_4_sm_alpha10"/>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        style="@style/SemiBold14"
+        android:textAlignment="gravity"
+        android:gravity="bottom"
+        android:ellipsize="end"
+        tools:text="Cioa da me 2"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom"
+        style="@style/SemiBold12"
+        android:textAlignment="gravity"
+        android:gravity="start"
+        android:ellipsize="end"
+        tools:text="02/29/2017"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/selection_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_wish_select_post_overlay"
+        android:visibility="gone"/>
+
+</androidx.cardview.widget.CardView>

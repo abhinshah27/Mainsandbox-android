@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        style="@style/DialogTitle"
+        android:text="@string/dialog_claim_success_title"/>
+
+    <TextView
+        android:id="@+id/dialog_content"
+        style="@style/DialogMessage"
+        android:text="@string/dialog_claim_success_message" />
+
+    <Button
+        android:id="@+id/close_btn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        style="@style/Bold18"
+        android:text="@string/ok"
+        android:textAllCaps="true"
+        android:textColor="@color/state_list_login_inverted"
+        android:background="@drawable/background_button_login_inverted"/>
+
+</LinearLayout>

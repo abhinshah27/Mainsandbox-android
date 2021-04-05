@@ -1,0 +1,37 @@
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="78dp"
+    android:height="78dp"
+    android:viewportWidth="78"
+    android:viewportHeight="78">
+  <path
+      android:pathData="M39.0001,78C17.461,78 0,60.5392 0,39.0001C-0,17.461 17.4608,0 38.9999,0C60.539,-0 78,17.4608 78,38.9999C78,60.539 60.5392,78 39.0001,78Z"
+      android:fillColor="#000000"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M39.0001,78C17.461,78 0,60.5392 0,39.0001C-0,17.461 17.4608,0 38.9999,0C60.539,-0 78,17.4608 78,38.9999C78,60.539 60.5392,78 39.0001,78Z"
+      android:fillColor="#000000"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M31.8813,36.3447L28.1432,40.1161C27.9523,40.3112 27.9523,40.6059 28.1432,40.801L35.0916,47.8536C35.2825,48.0488 35.5708,48.0488 35.7617,47.8536L46.7833,36.685C47.167,36.2927 47.0229,36 46.495,36L32.6955,36.0019C32.4072,36.0019 32.1209,36.1492 31.8813,36.3447Z"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M41.1869,21.5376L53.4779,34.2012C54.1737,34.918 54.1737,36.0175 53.4797,36.7324L36.2714,54.4624C35.5757,55.1792 34.5085,55.1792 33.8129,54.4624L21.5217,41.7988C20.826,41.082 20.826,39.9825 21.5217,39.2657L38.7283,21.5376C39.4241,20.8208 40.4912,20.8208 41.1869,21.5376L41.1869,21.5376ZM25.1853,40.5086L35.0649,50.6878L49.7655,35.4442L39.9331,25.3138L25.1853,40.5086L25.1853,40.5086Z"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M54.9193,39.3445C54.6859,38.8852 54.2667,38.8852 54.0333,39.3445C54.0333,39.3445 51,44.6734 51,46.5552C51,48.4391 52.5859,50 54.5,50C56.4141,50 58,48.4391 58,46.5552C57.9982,44.6731 54.9193,39.3445 54.9193,39.3445Z"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+</vector>

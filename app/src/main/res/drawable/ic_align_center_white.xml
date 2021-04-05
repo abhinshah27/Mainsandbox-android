@@ -1,0 +1,17 @@
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector android:height="34dp" android:viewportHeight="34.33732"
+    android:viewportWidth="34.332096" android:width="34dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillAlpha="1" android:fillColor="#FFFFFF"
+        android:fillType="evenOdd" android:pathData="M2.2883,4.5788L32.0438,4.5788C33.3076,4.5788 34.3321,3.5542 34.3321,2.2902C34.3321,1.0263 33.3076,0.0016 32.0438,0.0016L2.2883,0C1.0245,0 0,1.0246 0,2.2886C-0.0016,3.5542 1.0245,4.5788 2.2883,4.5788Z"/>
+    <path android:fillAlpha="1" android:fillColor="#FFFFFF"
+        android:fillType="evenOdd" android:pathData="M7.6284,9.9202C6.3646,9.9202 5.3401,10.9448 5.3401,12.2088C5.3401,13.4728 6.3646,14.4974 7.6284,14.4974L26.7016,14.4974C27.9654,14.4974 28.9899,13.4728 28.9899,12.2088C28.9899,10.9448 27.9654,9.9202 26.7016,9.9202L7.6284,9.9202Z"/>
+    <path android:fillAlpha="1" android:fillColor="#FFFFFF"
+        android:fillType="evenOdd" android:pathData="M32.0422,19.84L2.2883,19.84C1.0245,19.84 0,20.8646 0,22.1286C0,23.3925 1.0245,24.4172 2.2883,24.4172L32.0438,24.4172C33.3076,24.4172 34.3321,23.3925 34.3321,22.1286C34.3321,20.8646 33.306,19.84 32.0422,19.84Z"/>
+    <path android:fillAlpha="1" android:fillColor="#FFFFFF"
+        android:fillType="evenOdd" android:pathData="M26.702,29.7601L7.6288,29.7601C6.365,29.7601 5.3406,30.7847 5.3406,32.0487C5.3406,33.3127 6.365,34.3373 7.6288,34.3373L26.702,34.3373C27.9658,34.3373 28.9903,33.3127 28.9903,32.0487C28.9919,30.7847 27.9658,29.7601 26.702,29.7601Z"/>
+</vector>

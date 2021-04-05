@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextDefault">
+        <item name="android:textColor">@color/black_87</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+
+    <style name="TextRegular" parent="TextDefault">
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="Regular11" parent="TextRegular">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Regular12" parent="TextRegular">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Regular13" parent="TextRegular">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Regular14" parent="TextRegular">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Regular15" parent="TextRegular">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Regular16" parent="TextRegular">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Regular17" parent="TextRegular">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Regular18" parent="TextRegular">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Regular20" parent="TextRegular">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Regular22" parent="TextRegular">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="Regular24" parent="TextRegular">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Regular26" parent="TextRegular">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="Regular40" parent="TextRegular">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+
+    <style name="TextBold" parent="TextDefault">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="Bold11" parent="TextBold">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Bold14" parent="TextBold">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Bold16" parent="TextBold">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Bold18" parent="TextBold">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Bold20" parent="TextBold">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Bold22" parent="TextBold">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="Bold24" parent="TextBold">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Bold28" parent="TextBold">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Bold40" parent="TextBold">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+
+    <style name="TextSemiBold" parent="TextDefault">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+    </style>
+
+    <style name="SemiBold10" parent="TextSemiBold">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="SemiBold12" parent="TextSemiBold">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SemiBold14" parent="TextSemiBold">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SemiBold15" parent="TextSemiBold">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SemiBold16" parent="TextSemiBold">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SemiBold17" parent="TextSemiBold">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="SemiBold18" parent="TextSemiBold">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SemiBold20" parent="TextSemiBold">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SemiBold24" parent="TextSemiBold">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SemiBold40" parent="TextSemiBold">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="SemiBold70" parent="TextSemiBold">
+        <item name="android:textSize">70sp</item>
+    </style>
+
+
+    <style name="TextLight" parent="TextDefault">
+        <item name="android:fontFamily">@font/open_sans_light</item>
+    </style>
+
+    <style name="Light16" parent="TextLight">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Light22" parent="TextLight">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="Light28" parent="TextLight">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="Light36" parent="TextLight">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+
+</resources>

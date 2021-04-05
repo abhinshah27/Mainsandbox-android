@@ -1,0 +1,264 @@
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    style="@style/GenericActivityStyle"
+    tools:application=".activities_and_fragments.activities_login.SignupConfirmActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height">
+
+        <FrameLayout
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_margin"
+            android:background="@drawable/selector_button_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backArrowIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+                app:layout_constraintStart_toStartOf="@id/back_arrow"
+                app:layout_constraintTop_toTopOf="@id/back_arrow"
+                app:srcCompat="@drawable/ic_back_accent" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_centerInParent="true"
+            android:tint="@color/colorAccent"
+            app:srcCompat="@drawable/ic_luiss_logo"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/activity_margin_lg"
+        android:onClick="onClick"
+        style="@style/LoginButtonStyleInverted"
+        android:text="@string/action_sign_up" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/main_button"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingEnd="@dimen/activity_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:gravity="center_horizontal"
+                android:textAlignment="gravity"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                style="@style/Regular18"
+                android:textColor="@color/colorAccent"
+                android:text="@string/signup_welcome_m"
+                android:focusableInTouchMode="true"
+                android:focusable="true"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/email_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:background="@null"
+                    android:drawablePadding="10dp"
+                    style="@style/Regular18"
+                    tools:text="@string/prompt_email"/>
+
+                <include layout="@layout/custom_divider"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/custom_edit_text"
+                android:id="@+id/password_signup_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:imeOptions="actionDone"
+                android:imeActionLabel="@string/go"
+                android:inputType="textVisiblePassword"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    style="@style/Regular20"
+                    android:textColor="@color/black_70"
+                    android:text="@string/login_code_title"/>
+
+                <TextView
+                    android:id="@+id/hcode_explan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    style="@style/Regular14"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/login_code_explanation" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginEnd="-8dp"
+                    android:weightSum="1">
+
+                    <EditText
+                        android:id="@+id/hcode_1"
+                        style="@style/HcodeEditTextStyle"/>
+
+                    <EditText
+                        android:id="@+id/hcode_2"
+                        style="@style/HcodeEditTextStyle"/>
+
+                    <EditText
+                        android:id="@+id/hcode_3"
+                        style="@style/HcodeEditTextStyle"/>
+
+                    <EditText
+                        android:id="@+id/hcode_4"
+                        style="@style/HcodeEditTextStyle"/>
+
+                    <EditText
+                        android:id="@+id/hcode_5"
+                        style="@style/HcodeEditTextStyle"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/hcode_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/white"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:alpha="0">
+
+                        <include
+                            android:id="@+id/profile_picture"
+                            layout="@layout/custom_layout_profile_picture"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <ImageView
+                            android:id="@+id/check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/ic_green_check_24"/>
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/profile_picture"
+                            android:layout_toStartOf="@id/check"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            style="@style/Regular18"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/black_70"
+                            tools:text="Luke Skywalker"/>
+
+                    </RelativeLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progress_signup_confirm"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:indeterminate="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        android:alpha="0"/>
+
+                    <TextView
+                        android:id="@+id/error_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Regular14"
+                        android:maxLines="1"
+                        android:textColor="@color/hl_red_dark"
+                        android:text="@string/error_signup_confirm_interest"
+                        android:alpha="0"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/custom_generic_progress_indicator"/>
+
+</RelativeLayout>

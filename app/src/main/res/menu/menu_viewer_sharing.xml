@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+    android:id="@+id/close"
+    android:title="@string/action_close"
+    android:orderInCategory="99"
+    app:showAsAction="ifRoom"
+    android:icon="@drawable/ic_close"/>
+
+    <item
+        android:id="@+id/share"
+        android:title="@string/action_share"
+        android:orderInCategory="98"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_share"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"/>
+
+</menu>

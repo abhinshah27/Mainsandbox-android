@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/button_logout"
+            style="@style/DialogButtonStylePositive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/action_logout"
+            android:textColor="@color/colorAccent" />
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/base_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/logout_btn"
+        android:layout_alignParentTop="true"
+        android:divider="@null"
+        android:choiceMode="none"
+        android:descendantFocusability="beforeDescendants"
+        style="@style/ScrollbarStyle"
+        tools:listitem="@layout/item_settings_entry"/>
+
+</RelativeLayout>

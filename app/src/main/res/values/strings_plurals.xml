@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="heart_s_lc">%d stella</string>
+    <string name="heart_p_lc">%d stelle</string>
+    <string name="heart_s_uc">%d Stella</string>
+    <string name="heart_p_uc">%d Stelle</string>
+
+    <string name="interest_follower_s">%d follower</string>
+    <string name="interest_follower_p">%d follower</string>
+    <string name="interest_follower_k">%dk follower</string>
+
+    <string name="wish_repetitions_s">%d volta</string>
+    <string name="wish_repetitions_p">%d volte</string>
+
+
+    <!-- NOTIFICATIONS -->
+    <string name="notification_minute">%d minuto fa.</string>
+    <string name="notification_minutes">%d minuti fa.</string>
+    <string name="notification_hour">%d ora fa.</string>
+    <string name="notification_hours">%d ore fa.</string>
+    <string name="notification_day">%d giorno fa.</string>
+    <string name="notification_days">%d giorni fa.</string>
+    <string name="notification_week">%d settimana fa.</string>
+    <string name="notification_weeks">%d settimane fa.</string>
+    <string name="notification_month">%d mese fa.</string>
+    <string name="notification_months">%d mesi fa.</string>
+    <string name="notification_year">%d anno fa.</string>
+    <string name="notification_years">%d anni fa.</string>
+
+
+    <string name="inactivity_hour">%d Ora</string>
+    <string name="inactivity_hours">%d Ore</string>
+    <string name="inactivity_day">%d Giorno</string>
+    <string name="inactivity_days">%d Giorni</string>
+    <string name="inactivity_week">%d Settimana</string>
+    <string name="inactivity_weeks">%d Settimane</string>
+    <string name="inactivity_month">%d Mese</string>
+    <string name="inactivity_months">%d Mesi</string>
+    <string name="inactivity_year">%d Anno</string>
+    <string name="inactivity_years">%d Anni</string>
+
+
+    <string name="initiative_day">%d giorno</string>
+    <string name="initiative_days">%d giorni</string>
+
+</resources>

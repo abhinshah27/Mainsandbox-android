@@ -1,0 +1,18 @@
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="29dp"
+        android:height="41dp"
+        android:viewportWidth="29.0"
+        android:viewportHeight="41.0">
+    <path
+        android:pathData="M23.447,16.482L23.449,9.492C23.449,4.414 19.319,0.285 14.242,0.285C9.165,0.285 5.036,4.415 5.036,9.492L5.036,16.482L3.885,16.482C1.905,16.482 0.298,18.086 0.298,20.068L0.298,36.699C0.298,38.679 1.903,40.285 3.885,40.285L24.599,40.285C26.578,40.285 28.185,38.681 28.185,36.699L28.185,20.066C28.185,18.087 26.58,16.482 24.599,16.482L23.447,16.482ZM8.256,9.492C8.256,6.191 10.943,3.506 14.242,3.506C17.54,3.506 20.227,6.193 20.227,9.492L20.227,16.482L8.256,16.482L8.256,9.492ZM16.077,28.201L16.077,32.678C16.077,33.691 15.257,34.511 14.242,34.511C13.229,34.511 12.409,33.691 12.409,32.678L12.409,28.201C11.549,27.614 10.987,26.628 10.987,25.51C10.987,23.711 12.444,22.253 14.244,22.253C16.043,22.253 17.501,23.713 17.501,25.51C17.499,26.628 16.934,27.614 16.077,28.201Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="@color/black_38"
+        android:strokeWidth="1"/>
+</vector>

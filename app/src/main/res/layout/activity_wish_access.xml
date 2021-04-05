@@ -1,0 +1,236 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/root_content"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".features.HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/bottom_bar_height"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                     xmlns:tools="http://schemas.android.com/tools"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/layout_wishes_active"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="50dp"
+                android:paddingBottom="30dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/claim_active"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Bold22"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/wishes_action_create"/>
+
+                <ImageView
+                    android:id="@+id/create_wish_btn"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/claim_active"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    app:srcCompat="@drawable/ic_create_wish_inactive"/>
+
+                <include layout="@layout/layout_button_saved_wishes"
+                         android:id="@+id/saved_wishes_btn"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="60dp"
+                         android:layout_centerHorizontal="true"
+                         android:layout_below="@id/create_wish_btn"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_wishes_inactive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/wishes_inactive"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_create_wish_disabled"/>
+
+                    <TextView
+                        android:id="@+id/claim_inactive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        style="@style/Bold22"
+                        android:gravity="center_horizontal"
+                        android:text="@string/wishes_inactive_legacy_pref"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/black_54"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/complete_actions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_lg"
+                    android:layout_marginBottom="30dp"
+                    style="@style/Bold22"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/wishes_complete_actions"/>
+
+                <LinearLayout
+                    android:id="@+id/buttons_actions_hearts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/wishes_action_btn_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SemiBold20"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:textColor="@color/state_list_login"
+                        android:text="@string/wishes_btn_add_post"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_button_login"/>
+
+                    <Button
+                        android:id="@+id/wishes_action_btn_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        style="@style/SemiBold20"
+                        android:textColor="@color/state_list_login"
+                        android:text="@string/wishes_btn_invite"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_button_login"/>
+
+                    <Button
+                        android:id="@+id/wishes_action_btn_follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/SemiBold20"
+                        android:textColor="@color/state_list_login"
+                        android:text="@string/wishes_btn_follow_interests"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_button_login"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttons_actions_preferred_legacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_btn_legacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/wishes_action_btn_legacy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/SemiBold20"
+                            android:textColor="@color/state_list_legacy_wish"
+                            android:text="@string/wishes_btn_legacy_contact"
+                            android:textAllCaps="false"
+                            android:background="@drawable/background_button_legacy_wish"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            style="@style/Regular12"
+                            android:textColor="@color/black_70"
+                            android:text="@string/wishes_complete_actions_legacy"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_btn_preferred"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/wishes_action_btn_pref_interest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/SemiBold20"
+                            android:textColor="@color/state_list_login"
+                            android:text="@string/wishes_btn_preferred_interest"
+                            android:textAllCaps="false"
+                            android:background="@drawable/background_button_login"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            style="@style/Regular12"
+                            android:textColor="@color/black_70"
+                            android:text="@string/wishes_complete_actions_pref"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/layout_button_saved_wishes"
+                         android:id="@+id/saved_wishes_btn_1"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="40dp"
+                         android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/ic_cp_close"/>
+    </FrameLayout>
+
+</FrameLayout>

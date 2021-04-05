@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    tools:context=".corporate.activities_and_fragments.activities_home.global_search.GlobalSearchActivity"
+    app:umanoShadowHeight="0dp"
+    app:umanoFadeColor="@color/black_30"
+    app:umanoInitialState="collapsed"
+    app:umanoOverlay="true"
+    app:umanoPanelHeight="0dp">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:id="@+id/root_content"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- CONTENT SECTION -->
+            <FrameLayout
+                android:id="@+id/pages_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include layout="@layout/luiss_bottom_bar"
+                android:id="@+id/bottom_bar"/>
+
+        </FrameLayout>
+
+        <include layout="@layout/custom_generic_progress_indicator"
+                 android:id="@+id/generic_progress_indicator"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/bottom_sheet_post_actions"
+             android:id="@+id/post_bottom_sheet"/>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

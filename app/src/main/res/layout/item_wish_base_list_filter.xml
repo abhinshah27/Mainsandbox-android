@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+              android:animateLayoutChanges="true">
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/action_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="start|center_vertical"
+        style="@style/Regular16"
+        android:textColor="@color/color_state_wish_item_list"
+        tools:text="Your action here"
+        android:duplicateParentState="true"
+        android:background="@drawable/selector_background_wish_item_list" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/child_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:background="@color/luiss_blue_alpha_light"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="40dp">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/filter_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SwitchCompatStyleSmall"/>
+
+            <TextView
+                android:id="@+id/filter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/activity_margin_lg"
+                style="@style/Regular16"
+                android:gravity="start"
+                android:text="@string/wish_filter_containing"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_words_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/default_filter_item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:animateLayoutChanges="false">
+
+                <androidx.emoji.widget.EmojiAppCompatEditText
+                    android:id="@+id/add_filter_word_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:hint="@string/item_wish_filter_add_hint"
+                    android:layout_centerVertical="true"
+                    style="@style/Regular16"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:textCursorDrawable="@drawable/custom_cursor_drawable"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/add_filter_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="10dp"
+                        app:srcCompat="@drawable/ic_add_orange_svg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        style="@style/Regular16"
+                        android:duplicateParentState="true"
+                        android:gravity="start"
+                        android:text="@string/wish_filter_add_text"
+                        android:textColor="@color/colorAccent" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

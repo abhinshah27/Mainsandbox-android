@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/selector_background_post_visibility_item"
+    android:padding="@dimen/activity_margin_lg"
+    android:layout_marginBottom="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:duplicateParentState="true"/>
+
+    <View
+        android:id="@+id/selector"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_wish_recip_ic"
+        android:duplicateParentState="true"/>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:layout_toEndOf="@id/circle_icon"
+        android:layout_toStartOf="@id/selector"
+        android:maxLines="1"
+        android:ellipsize="end"
+        style="@style/Regular18"
+        tools:text="Luke Skywalker"
+        android:layout_centerVertical="true"
+        android:textColor="@color/color_state_item_post_visibility"
+        android:duplicateParentState="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/luiss_toolbar_btp"
+             android:id="@+id/toolbar"/>
+
+    <ListView
+        android:id="@+id/language_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_margin_lg"
+        android:layout_below="@id/toolbar"
+        android:choiceMode="multipleChoice"
+        android:divider="@null"
+        tools:listitem="@layout/item_profile_language"
+        style="@style/ScrollbarStyle"/>
+
+    <TextView
+        android:id="@+id/no_result"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="90dp"
+        android:layout_below="@id/toolbar"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Regular14"
+        android:textColor="@color/black_26"
+        android:text="@string/error_generic_list"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="144dp"
+        android:height="138dp"
+        android:viewportWidth="144.0"
+        android:viewportHeight="138.0">
+    <path
+        android:pathData="M143.47,2.72l-88.04,88.24l52.11,35.14z"
+        android:strokeColor="#00000000"
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M0.53,54.03l50.91,34.34l88.04,-88.04z"
+        android:strokeColor="#00000000"
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M54.03,95.95l0,41.72l20.96,-27.75z"
+        android:strokeColor="#00000000"
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="1"/>
+</vector>

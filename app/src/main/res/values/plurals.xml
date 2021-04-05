@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <plurals name="plural_hearts_lc">
+        <item quantity="one">@string/heart_s_lc</item>
+        <item quantity="other">@string/heart_p_lc</item>
+    </plurals>
+
+    <plurals name="plural_hearts_uc">
+        <item quantity="one">@string/heart_s_uc</item>
+        <item quantity="other">@string/heart_p_uc</item>
+    </plurals>
+
+    <plurals name="post_interaction_confirm_hearts">
+        <item quantity="one">@string/post_interaction_confirm_heart</item>
+        <item quantity="other">@string/post_interaction_confirm_hearts</item>
+    </plurals>
+
+    <plurals name="plural_interest_followers">
+        <item quantity="one">@string/interest_follower_s</item>
+        <item quantity="other">@string/interest_follower_p</item>
+    </plurals>
+
+    <plurals name="plural_wish_repetitions">
+        <item quantity="one">@string/wish_repetitions_s</item>
+        <item quantity="other">@string/wish_repetitions_p</item>
+    </plurals>
+
+    <plurals name="notification_minutes">
+        <item quantity="one">@string/notification_minute</item>
+        <item quantity="other">@string/notification_minutes</item>
+    </plurals>
+
+    <plurals name="notification_hours">
+        <item quantity="one">@string/notification_hour</item>
+        <item quantity="other">@string/notification_hours</item>
+    </plurals>
+
+    <plurals name="notification_days">
+        <item quantity="one">@string/notification_day</item>
+        <item quantity="other">@string/notification_days</item>
+    </plurals>
+
+    <plurals name="notification_weeks">
+        <item quantity="one">@string/notification_week</item>
+        <item quantity="other">@string/notification_weeks</item>
+    </plurals>
+
+    <plurals name="notification_months">
+        <item quantity="one">@string/notification_month</item>
+        <item quantity="other">@string/notification_months</item>
+    </plurals>
+
+    <plurals name="notification_years">
+        <item quantity="one">@string/notification_year</item>
+        <item quantity="other">@string/notification_years</item>
+    </plurals>
+
+    <plurals name="inactivity_hours">
+        <item quantity="one">@string/inactivity_hour</item>
+        <item quantity="other">@string/inactivity_hours</item>
+    </plurals>
+
+    <plurals name="inactivity_days">
+        <item quantity="one">@string/inactivity_day</item>
+        <item quantity="other">@string/inactivity_days</item>
+    </plurals>
+
+    <plurals name="inactivity_weeks">
+        <item quantity="one">@string/inactivity_week</item>
+        <item quantity="other">@string/inactivity_weeks</item>
+    </plurals>
+
+    <plurals name="inactivity_months">
+        <item quantity="one">@string/inactivity_month</item>
+        <item quantity="other">@string/inactivity_months</item>
+    </plurals>
+
+    <plurals name="inactivity_years">
+        <item quantity="one">@string/inactivity_year</item>
+        <item quantity="other">@string/inactivity_years</item>
+    </plurals>
+
+    <plurals name="initiative_days">
+        <item quantity="one">@string/initiative_day</item>
+        <item quantity="other">@string/initiative_days</item>
+    </plurals>
+
+</resources>

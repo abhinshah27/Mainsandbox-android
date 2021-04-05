@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_bar_height"
+    android:layout_gravity="bottom"
+    android:background="@color/white">
+
+    <include layout="@layout/custom_divider"/>
+
+    <FrameLayout
+        android:id="@+id/main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_button_post_mask">
+
+        <ImageView
+            android:id="@+id/main_action_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/shape_round_accent"
+            app:srcCompat="@drawable/ic_hl_symbol"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:layout_toStartOf="@id/main_layout"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/bottom_global_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp">
+
+            <ImageView
+                android:id="@+id/icon_global_search"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:srcCompat="@drawable/transition_global_search_black"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_timeline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp">
+
+            <ImageView
+                android:id="@+id/icon_timeline"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:srcCompat="@drawable/transition_timeline_black"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/main_layout"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/bottom_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp">
+
+            <ImageView
+                android:id="@+id/icon_profile"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/transition_aboutme_black_2"/>
+
+            <View
+                android:id="@+id/notification_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="end"
+                android:background="@drawable/notification_badge_circle"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_chats"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp">
+
+            <ImageView
+                android:id="@+id/icon_chats"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/transition_chats_black"/>
+
+            <View
+                android:id="@+id/notification_dot_chat"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_gravity="end"
+                android:background="@drawable/notification_badge_circle"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/bottom_notifications"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight=".5"-->
+            <!--android:paddingStart="2dp"-->
+            <!--android:paddingEnd="2dp">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/icon_notifications"-->
+                <!--android:layout_width="24dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="end"-->
+                <!--app:srcCompat="@drawable/transition_notifications_black"/>-->
+
+            <!--&lt;!&ndash;<View&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/notification_dot"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="8dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="8dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="14dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="end"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@drawable/notification_badge_circle"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:visibility="visible"/>&ndash;&gt;-->
+        <!--</FrameLayout>-->
+    </LinearLayout>
+</RelativeLayout>

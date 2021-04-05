@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_activated="false"
+          android:state_enabled="false"
+          android:drawable="@drawable/ic_privacy_circle_alpha_black"/>
+
+    <item android:state_activated="true"
+          android:state_enabled="true"
+          android:drawable="@drawable/ic_privacy_circle_orange"/>
+
+    <item android:drawable="@drawable/ic_privacy_circle_black"/>
+
+</selector>

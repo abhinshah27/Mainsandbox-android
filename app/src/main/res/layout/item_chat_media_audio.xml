@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupPlaceHolder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="placeHolder,placeHolderBackground"
+        app:layout_constraintBottom_toTopOf="@id/infoFooterIncoming"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupIncoming"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="profileIncoming,infoFooterIncoming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupOutgoing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:constraint_referenced_ids="profileOutgoing,infoFooterOutgoing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateHeader" />
+
+    <TextView
+        android:id="@+id/dateHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin_md"
+        style="@style/Regular14"
+        android:textAlignment="center"
+        android:textColor="@color/black_54"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/groupPlaceHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tues, 09 Oct, 14:27" />
+
+    <View
+        android:id="@+id/placeHolderBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/divider_on_white"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/groupPlaceHolder"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/groupPlaceHolder"
+        app:layout_constraintStart_toStartOf="@+id/groupPlaceHolder"
+        app:layout_constraintTop_toTopOf="@+id/groupPlaceHolder" />
+
+    <ImageView
+        android:id="@+id/placeHolder"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/placeHolderBackground"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/placeHolderBackground"
+        app:layout_constraintStart_toStartOf="@+id/placeHolderBackground"
+        app:layout_constraintTop_toTopOf="@+id/placeHolderBackground"
+        app:srcCompat="@drawable/ic_placeholder_audio" />
+
+    <include
+        layout="@layout/cpost_background_audio"
+        android:id="@+id/audioView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/groupPlaceHolder"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="@+id/groupPlaceHolder"
+        app:layout_constraintStart_toStartOf="@+id/groupPlaceHolder"
+        app:layout_constraintTop_toTopOf="@+id/groupPlaceHolder" />
+
+    <include
+        android:id="@+id/profileOutgoing"
+        layout="@layout/custom_layout_profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/profileIncoming"
+        layout="@layout/custom_layout_profile_picture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/infoFooterIncoming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="2dp"
+        style="@style/Regular12"
+        android:textAlignment="textStart"
+        android:textColor="@color/black_54"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupPlaceHolder"
+        tools:text="Read, Tues 09 Oct, 14:33" />
+
+    <TextView
+        android:id="@+id/infoFooterOutgoing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        style="@style/Regular12"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black_54"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groupPlaceHolder"
+        tools:text="Read, Tues 09 Oct, 14:33" />
+
+    <ImageView
+        android:id="@+id/shareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/groupPlaceHolder"
+        app:layout_constraintEnd_toEndOf="@+id/groupPlaceHolder"
+        app:srcCompat="@drawable/ic_share_svg_dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/black_38">
+
+    <View
+        android:id="@+id/backgroundChat"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:background="@drawable/shape_round_white"
+        app:layout_constraintEnd_toStartOf="@+id/backgroundVoice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnTextChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundChat"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundChat"
+        app:layout_constraintStart_toStartOf="@+id/backgroundChat"
+        app:layout_constraintTop_toTopOf="@+id/backgroundChat"
+        app:srcCompat="@drawable/ic_action_chat"/>
+
+    <View
+        android:id="@+id/backgroundVoice"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:background="@drawable/shape_round_white"
+        app:layout_constraintEnd_toStartOf="@+id/backgroundVideo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backgroundChat"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCallVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundVoice"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundVoice"
+        app:layout_constraintStart_toStartOf="@+id/backgroundVoice"
+        app:layout_constraintTop_toTopOf="@+id/backgroundVoice"
+        app:srcCompat="@drawable/ic_call_voice_white"
+        />
+
+    <View
+        android:id="@+id/backgroundVideo"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:background="@drawable/shape_round_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backgroundVoice"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCallVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundVideo"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundVideo"
+        app:layout_constraintStart_toStartOf="@+id/backgroundVideo"
+        app:layout_constraintTop_toTopOf="@+id/backgroundVideo"
+        app:srcCompat="@drawable/ic_action_video_24"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btnTextChat,backgroundChat"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupVoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btnCallVoice,backgroundVoice"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="backgroundVideo,btnCallVideo"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

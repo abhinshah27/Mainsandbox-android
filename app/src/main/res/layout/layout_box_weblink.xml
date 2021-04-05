@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/weblink_box"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:weightSum="1"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_rectangle_white">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:background="@color/divider_on_white">
+
+            <ImageView
+                android:id="@+id/weblink_placeholder"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_placeholder_image"/>
+
+            <ImageView
+                android:id="@+id/weblink_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/weblink_icon"
+                android:layout_width="@dimen/activity_margin_lg"
+                android:layout_height="@dimen/activity_margin_lg"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/ic_web_link_black"/>
+
+            <TextView
+                android:id="@+id/weblink_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="THE GUARDIAN"
+                style="@style/Regular12"
+                android:textColor="@color/black_70"
+                android:layout_alignParentBottom="true"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:id="@+id/weblink_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/weblink_icon"
+                android:layout_above="@id/weblink_source"
+                style="@style/Regular14"
+                tools:text="How close are we to a Black Mirror-style digital afterlife?How close are we to a Black Mirror-style digital afterlife?"
+                android:ellipsize="end"
+                android:maxLines="3"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/weblink_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="top"
+        android:background="@drawable/shape_round_white"
+        app:srcCompat="@drawable/ic_remove_black_svg"
+        />
+
+</FrameLayout>

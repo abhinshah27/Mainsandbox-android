@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/root_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:background="@color/colorAccent"
+        tools:context=".corporate.activities_and_fragments.activities_home.profile.ProfileActivity">
+
+        <!-- TODO uncomment and restore within previous LinearLayout to restore reduced scrollview -->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:id="@+id/root_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+
+
+        <RelativeLayout
+            android:id="@+id/background_container"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:background="@color/black_10"
+            android:paddingBottom="20dp"
+            >
+
+            <FrameLayout
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/activity_margin_lg">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_close"
+                    android:background="@drawable/selector_button_round"
+                    android:duplicateParentState="true"/>
+            </FrameLayout>
+
+            <include layout="@layout/custom_layout_profile_picture"
+                     android:id="@+id/profile_picture"
+                     android:layout_width="100dp"
+                     android:layout_height="100dp"
+                     android:layout_marginTop="30dp"
+                     android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/name_and_hearts_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/white"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_on_white"/>
+
+        <include layout="@layout/custom_divider"/>
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="-2dp"-->
+            <!--android:background="@color/white"-->
+            <!--style="@style/ScrollbarStyle">-->
+
+            <include layout="@layout/profile_details"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"/>
+
+        <!--</ScrollView>-->
+    </LinearLayout>
+</ScrollView>

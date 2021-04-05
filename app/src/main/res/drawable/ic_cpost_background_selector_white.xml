@@ -1,0 +1,27 @@
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="24dp"
+    android:viewportWidth="37"
+    android:viewportHeight="34">
+  <path
+      android:pathData="M10.8813,15.3447L7.1432,19.1161C6.9523,19.3112 6.9523,19.6059 7.1432,19.801L14.0916,26.8536C14.2825,27.0488 14.5708,27.0488 14.7617,26.8536L25.7833,15.685C26.167,15.2927 26.0229,15 25.495,15L11.6955,15.0019C11.4072,15.0019 11.1209,15.1492 10.8813,15.3447Z"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M20.1869,0.5376L32.4779,13.2012C33.1737,13.918 33.1737,15.0175 32.4798,15.7324L15.2714,33.4624C14.5757,34.1792 13.5085,34.1792 12.8128,33.4624L0.5218,20.7988C-0.1739,20.082 -0.1739,18.9825 0.5218,18.2657L17.7283,0.5376C18.424,-0.1792 19.4912,-0.1792 20.1869,0.5376L20.1869,0.5376ZM4.1854,19.5087L14.065,29.6877L28.7656,14.4441L18.9332,4.3137L4.1854,19.5087L4.1854,19.5087Z"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+  <path
+      android:pathData="M33.9193,18.3445C33.6859,17.8852 33.2667,17.8852 33.0333,18.3445C33.0333,18.3445 30,23.6734 30,25.5552C30,27.4391 31.5859,29 33.5,29C35.4141,29 37,27.4391 37,25.5552C36.9982,23.6731 33.9193,18.3445 33.9193,18.3445Z"
+      android:fillColor="#FFFFFF"
+      android:fillType="evenOdd"
+      android:fillAlpha="1"/>
+</vector>

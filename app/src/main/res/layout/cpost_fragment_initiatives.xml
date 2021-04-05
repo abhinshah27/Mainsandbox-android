@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light">
+
+        <include layout="@layout/navigation_progress_bar"
+                 android:id="@+id/navigation_progress_bar"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/wish_navigation_progress_bar"
+                 android:layout_alignParentBottom="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/navigation_progress_bar">
+
+            <!-- BUTTONS STEP -->
+            <LinearLayout
+                android:id="@+id/layout_initiative_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btn_initiative_transfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_cpost_initiative_action"
+                        android:paddingStart="@dimen/activity_margin_lg"
+                        android:paddingEnd="@dimen/activity_margin_lg"
+                        style="@style/Regular18"
+                        android:textColor="@color/state_list_initiative_action_btn"
+                        android:text="@string/action_initiative_transfer"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_initiative_support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_initiative_transfer"
+                        android:layout_marginTop="@dimen/activity_margin"
+                        android:layout_alignStart="@id/btn_initiative_transfer"
+                        android:layout_alignEnd="@id/btn_initiative_transfer"
+                        android:background="@drawable/selector_cpost_initiative_action"
+                        style="@style/Regular18"
+                        android:textColor="@color/state_list_initiative_action_btn"
+                        android:text="@string/action_initiative_support"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/btn_initiative_collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btn_initiative_support"
+                        android:layout_marginTop="@dimen/activity_margin"
+                        android:layout_alignStart="@id/btn_initiative_transfer"
+                        android:layout_alignEnd="@id/btn_initiative_transfer"
+                        android:background="@drawable/selector_cpost_initiative_action"
+                        style="@style/Regular18"
+                        android:textColor="@color/state_list_initiative_action_btn"
+                        android:text="@string/action_initiative_collect"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_initiative_3a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingStart="@dimen/activity_margin_lg"
+                android:paddingEnd="@dimen/activity_margin_lg"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/enter_text_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    style="@style/Regular18"
+                    android:text="@string/initiative_amount_txt"
+                    android:textColor="@color/black_70" />
+
+                <TextView
+                    android:id="@+id/count_heart_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@id/enter_text_description"
+                    android:gravity="end"
+                    android:layout_toEndOf="@id/enter_text_description"
+                    android:layout_marginStart="8dp"
+                    style="@style/SemiBold14"
+                    android:text="@string/settings_redeem_available_hearts"
+                    android:textColor="@color/colorAccent"/>
+
+                <RelativeLayout
+                    android:id="@+id/initiative_enter_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/enter_text_description"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:background="@drawable/background_rounded_4_white">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_full_heart_orange"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/expiration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="end"
+                        android:layout_marginStart="8dp"
+                        style="@style/Regular14"
+                        android:text="@string/initiative_days"
+                        android:textColor="@color/state_list_initiative_expiration"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/amount_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/icon"
+                        android:layout_toStartOf="@id/expiration"
+                        android:padding="12dp"
+                        android:hint="@string/initiative_amount_hint"
+                        style="@style/Regular18" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="end"
+                    style="@style/Regular14"
+                    android:textColor="@color/black_70"
+                    android:text="@string/error_redeem_enough_cash"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_initiative_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_light"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    style="@style/Regular18"
+                    android:text="@string/initiative_select_recipient"
+                    android:textColor="@color/black_70"
+                    android:visibility="gone"/>
+
+                <include layout="@layout/cpost_fragment_tags"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_initiative_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/shape_round_white">
+
+                    <ImageView
+                        android:id="@+id/balloons_icon"
+                        android:layout_gravity="center"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/ic_initiative_icon"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Regular20"
+                    android:textAlignment="center"
+                    android:text="@string/initiative_confirm_1"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/SemiBold20"
+                    android:text="@string/initiative_confirm_2"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- PICKERS MUST STAY ON TOP -->
+    <RelativeLayout
+        android:id="@+id/layout_initiative_3b"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/gray_light"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            style="@style/Regular16"
+            android:text="@string/cpost_initiative_amount" />
+
+        <FrameLayout
+            android:id="@+id/pickers_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_close_black_54"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/initiative_pickers_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/amount_text"
+            android:weightSum="1"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/more_info_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginEnd="@dimen/activity_margin_lg"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_map_pin_black"/>
+
+    <TextView
+        android:id="@+id/more_info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/more_info_icon"
+        android:layout_centerVertical="true"
+        android:maxLines="@integer/interest_detail_description_lines"
+        style="@style/Regular14"
+        android:textColor="@color/black_54"
+        tools:text="Lorem ipsum dolor sit amet, "/>
+
+    <EditText
+        android:id="@+id/more_info_et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/more_info_icon"
+        android:gravity="center_vertical"
+        style="@style/Regular14"
+        android:textColor="@color/black_54"
+        android:textColorHint="@color/black_38"
+        android:inputType="textCapSentences"
+        android:textCursorDrawable="@drawable/custom_cursor_drawable"
+        android:maxLines="@integer/interest_detail_description_lines"
+        android:hint="@string/generic_fallback"
+        android:background="@null"
+        android:visibility="gone"/>
+
+
+    <include layout="@layout/custom_divider"
+             android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

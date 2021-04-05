@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/luiss_toolbar_btp"
+             android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/focus_catcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:orientation="horizontal"/>
+
+    <include layout="@layout/profile_search_box"
+             android:id="@+id/search_box"
+             android:layout_width="match_parent"
+             android:layout_height="70dp"
+             android:visibility="visible"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/ScrollbarStyleNoPadding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/tiles_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                >
+
+                <FrameLayout
+                    android:id="@+id/main_interest_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/background_rounded_4_sm_gray">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/ic_placeholder_image"
+                        android:layout_gravity="center"
+                        />
+
+                    <ImageView
+                        android:id="@+id/main_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/background_rounded_4_sm"/>
+
+                    <TextView
+                        android:id="@+id/main_interest_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_gravity="bottom"
+                        style="@style/SemiBold14"
+                        tools:text="Musée de l'Imprimerie"
+                        android:textColor="@color/white"
+                        android:background="@drawable/gradient_interest_tile_text"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/top_tiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/main_interest_layout"
+                    android:weightSum="1">
+
+                    <include layout="@layout/item_interest_tile"
+                             android:id="@+id/interest_1"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_weight=".333333333333333"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                        />
+
+                    <include layout="@layout/item_interest_tile"
+                             android:id="@+id/interest_2"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_weight=".333333333333333"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                        />
+
+                    <include layout="@layout/item_interest_tile"
+                             android:id="@+id/interest_3"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_weight=".333333333333333"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/top_tiles"
+                    android:weightSum="1"
+                    android:baselineAligned="false">
+
+                    <include layout="@layout/item_interest_tile"
+                             android:id="@+id/interest_4"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_weight=".333333333333333"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                        />
+
+                    <include layout="@layout/item_interest_tile"
+                             android:id="@+id/interest_5"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_weight=".333333333333333"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                        />
+
+                    <include layout="@layout/item_interest_tile"
+                             android:id="@+id/interest_6"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_weight=".333333333333333"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/no_result"
+                    android:layout_centerInParent="true"
+                    style="@style/NoResultStyle"
+                    android:text="@string/no_similar_for_interest"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/items_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_lg"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

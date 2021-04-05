@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/layout_checkbox"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/activity_margin_lg"
+              android:paddingEnd="@dimen/activity_margin_lg"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp"
+              android:orientation="horizontal">
+
+    <View
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center_vertical"
+        android:duplicateParentState="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/selector_accent_checkbox"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Regular18"
+        android:textColor="@color/color_state_generic_checkbox"
+        android:duplicateParentState="true"
+        android:layout_gravity="center_vertical"
+        tools:text="@string/settings_ic_feed_ap_both"/>
+
+</LinearLayout>

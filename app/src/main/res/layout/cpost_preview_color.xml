@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_margin_lg"
+    android:paddingBottom="@dimen/activity_margin_lg"
+    android:layout_gravity="center">
+
+    <View
+        android:id="@+id/btnBckgrRed"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:background="@drawable/selector_cpost_background_red"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrOrange"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/btnBckgrOrange"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:background="@drawable/selector_cpost_background_orange"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrYellow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrRed" />
+
+    <View
+        android:id="@+id/btnBckgrYellow"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:background="@drawable/selector_cpost_background_yellow"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrBrown"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrOrange" />
+
+    <View
+        android:id="@+id/btnBckgrBrown"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:background="@drawable/selector_cpost_background_brown"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrGreenL"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrYellow" />
+
+    <View
+        android:id="@+id/btnBckgrGreenL"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:background="@drawable/selector_cpost_background_green_l"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrGreenD"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrBrown" />
+
+    <View
+        android:id="@+id/btnBckgrGreenD"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:background="@drawable/selector_cpost_background_green_d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrGreenL" />
+
+    <View
+        android:id="@+id/btnBckgrPurpleL"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_cpost_background_purple_l"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrPurpleD"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBckgrRed" />
+
+    <View
+        android:id="@+id/btnBckgrPurpleD"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_cpost_background_purple_d"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrBlueD"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrPurpleL"
+        app:layout_constraintTop_toBottomOf="@+id/btnBckgrOrange" />
+
+    <View
+        android:id="@+id/btnBckgrBlueD"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_cpost_background_blue_d"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrBlueL"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrPurpleD"
+        app:layout_constraintTop_toBottomOf="@+id/btnBckgrYellow" />
+
+    <View
+        android:id="@+id/btnBckgrBlueL"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_cpost_background_blue_l"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrBlack"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrBlueD"
+        app:layout_constraintTop_toBottomOf="@+id/btnBckgrBrown" />
+
+    <View
+        android:id="@+id/btnBckgrBlack"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_cpost_background_black"
+        app:layout_constraintEnd_toStartOf="@+id/btnBckgrWhite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrBlueL"
+        app:layout_constraintTop_toBottomOf="@+id/btnBckgrGreenL" />
+
+    <View
+        android:id="@+id/btnBckgrWhite"
+        android:layout_width="@dimen/item_cpost_color_circle_size"
+        android:layout_height="@dimen/item_cpost_color_circle_size"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_cpost_background_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBckgrBlack"
+        app:layout_constraintTop_toBottomOf="@+id/btnBckgrGreenD" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_bar_height"
+    android:layout_gravity="bottom"
+    android:background="@color/colorAccent"
+    tools:layout_editor_absoluteY="683dp">
+
+    <View
+        android:id="@+id/bottom_global_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_timeline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <View
+        android:id="@+id/bottom_timeline"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_action_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bottom_global_search"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <View
+        android:id="@+id/main_action_btn"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_profile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bottom_timeline"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <View
+        android:id="@+id/bottom_profile"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottom_notifications"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_action_btn"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <View
+        android:id="@+id/bottom_notifications"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottom_profile"
+        tools:layout_editor_absoluteY="48dp" />
+
+
+    <ImageView
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        app:srcCompat="@drawable/ic_new_post"
+        app:layout_constraintBottom_toBottomOf="@+id/main_action_btn"
+        app:layout_constraintEnd_toEndOf="@+id/main_action_btn"
+        app:layout_constraintStart_toStartOf="@+id/main_action_btn"
+        app:layout_constraintTop_toTopOf="@+id/main_action_btn"/>
+
+    <ImageView
+        android:id="@+id/icon_global_search"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/background_button_bottom_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_global_search"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_global_search"
+        app:layout_constraintStart_toStartOf="@+id/bottom_global_search"
+        app:layout_constraintTop_toTopOf="@+id/bottom_global_search"
+        app:srcCompat="@drawable/transition_home" />
+
+    <ImageView
+        android:id="@+id/icon_timeline"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_button_bottom_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_timeline"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_timeline"
+        app:layout_constraintStart_toStartOf="@+id/bottom_timeline"
+        app:layout_constraintTop_toTopOf="@+id/bottom_timeline"
+        app:srcCompat="@drawable/transition_timeline" />
+
+    <ImageView
+        android:id="@+id/icon_profile"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_button_bottom_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_profile"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_profile"
+        app:layout_constraintStart_toStartOf="@+id/bottom_profile"
+        app:layout_constraintTop_toTopOf="@+id/bottom_profile"
+        app:srcCompat="@drawable/transition_aboutme_2" />
+
+    <!--<View-->
+        <!--android:id="@+id/notification_dot"-->
+        <!--android:layout_width="8dp"-->
+        <!--android:layout_height="8dp"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:background="@drawable/layer_notifications_badge"-->
+        <!--android:visibility="visible"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/icon_profile"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/icon_profile"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/icon_profile"-->
+        <!--app:layout_constraintVertical_bias="0.35000000" />-->
+
+    <ImageView
+        android:id="@+id/icon_notifications"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_button_bottom_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_notifications"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_notifications"
+        app:layout_constraintStart_toStartOf="@+id/bottom_notifications"
+        app:layout_constraintTop_toTopOf="@+id/bottom_notifications"
+        app:srcCompat="@drawable/transition_notifications" />
+
+    <View
+        android:id="@+id/notification_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="end"
+        android:background="@drawable/layer_notifications_badge"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_notifications"
+        app:layout_constraintEnd_toEndOf="@+id/icon_notifications"
+        app:layout_constraintTop_toTopOf="@+id/icon_notifications"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "225240114104",
+    "firebase_url": "https://luissbslinkcorporate.firebaseio.com",
+    "project_id": "luissbslinkcorporate",
+    "storage_bucket": "luissbslinkcorporate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225240114104:android:57226b0cac7ee2ea",
+        "android_client_info": {
+          "package_name": "it.keybiz.lbsapp.corporate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225240114104-2jkuu2fagq3saa5tj0g8k127nbscjdpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7jM6uwUtnr8ai-moM7FFpVeavA1B6SCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225240114104-2jkuu2fagq3saa5tj0g8k127nbscjdpb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225240114104:android:34b9fc3fcad894c3",
+        "android_client_info": {
+          "package_name": "it.keybiz.lbsapp.corporate.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225240114104-2jkuu2fagq3saa5tj0g8k127nbscjdpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7jM6uwUtnr8ai-moM7FFpVeavA1B6SCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225240114104-2jkuu2fagq3saa5tj0g8k127nbscjdpb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

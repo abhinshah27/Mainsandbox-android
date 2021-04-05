@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <string name="app_name" translatable="false">Summer School-DEV</string>
+    <string name="google_maps_key" translatable="false">AIzaSyC7jM6uwUtnr8ai-moM7FFpVeavA1B6SCc</string>
+
+    <string name="notif_channel_default" translatable="false">lss_dev_default</string>
+    <string name="notif_channel_chat_unsent" translatable="false">lss_dev_chat_unsent_messages</string>
+    <string name="notif_channel_chat" translatable="false">lss_dev_chat</string>
+    <string name="notif_channel_calls" translatable="false">lss_dev_calls</string>
+    <string name="notif_channel_service" translatable="false">lss_dev_service</string>
+
+    <string name="notif_channel_default_description">Default canale di notifica di Luiss Summer School-DEV</string>
+    <string name="notif_channel_chat_unsent_description">Canale di notifica di Luiss Summer School-DEV per informazioni circa messaggi non inviati</string>
+    <string name="notif_channel_chat_description">Canale di notifica di Luiss Summer School-DEV per messaggi in arrivo</string>
+    <string name="notif_channel_calls_description">Canale di notifica di Luiss Summer School-DEV per chiamate in arrivo e in uscita</string>
+    <string name="notif_channel_service_description">Canale di notifica di Luiss Summer School-DEV per informazioni circa servizi in background</string>
+</resources>

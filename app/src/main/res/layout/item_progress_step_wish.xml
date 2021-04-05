@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<View
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/step"
+    android:layout_width="0dp"
+    android:layout_height="4dp"
+    android:layout_weight=".16666666666"
+    android:layout_marginStart="1px"
+    android:layout_marginEnd="1px"
+    android:layout_gravity="center"
+    android:background="@drawable/selector_progress_step_wish"/>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/root_content"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/hl_toolbar_transp_wish"
+                 android:id="@+id/toolbar"/>
+
+        <!--<include layout="@layout/hl_bottom_bar_ic_black"-->
+        <!--android:id="@+id/bottom_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/bottom_bar_height"-->
+        <!--android:layout_alignParentBottom="true"/>-->
+
+        <LinearLayout
+            android:id="@+id/titles_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                style="@style/Regular24"
+                tools:text="Wish Triggered by:"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Regular20"
+                tools:text="Something new on Highlanders from Juventus FC"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+
+        <include layout="@layout/navigation_progress_bar"
+                 android:id="@+id/navigation_progress_bar"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/wish_navigation_progress_bar"
+                 android:layout_alignParentBottom="true"/>
+
+        <FrameLayout
+            android:id="@+id/pages_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/activity_margin_lg"
+            android:layout_below="@id/titles_container"
+            android:layout_above="@id/navigation_progress_bar"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_generic_progress_indicator"/>
+
+</FrameLayout>

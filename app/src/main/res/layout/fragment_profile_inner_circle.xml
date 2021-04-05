@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/luiss_toolbar_btp"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/focus_catcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:orientation="horizontal"/>
+
+    <include layout="@layout/profile_search_box"
+        android:id="@+id/search_box"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+
+            <FrameLayout
+                android:id="@+id/profile_tab_inner_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_weight=".5">
+
+                <TextView
+                    android:id="@+id/tab_ic_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    style="@style/Regular18"
+                    android:text="@string/profile_card_network"
+                    android:textColor="@color/state_list_custom_tab"
+                    android:background="@drawable/background_custom_tab" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/profile_tab_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_weight=".5"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tab_contacts_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    style="@style/Regular18"
+                    android:text="@string/contacts"
+                    android:textColor="@color/state_list_custom_tab"
+                    android:background="@drawable/background_custom_tab" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/profile_tab_near_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_weight=".5"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tab_near_me_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    style="@style/Regular18"
+                    android:text="@string/ic_near_me"
+                    android:textColor="@color/state_list_custom_tab"
+                    android:background="@drawable/background_custom_tab" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/inner_circle_pages_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/inner_circle_page_circles_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/inner_circle_page_ic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/ScrollbarStyle"/>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/no_result"
+                style="@style/NoResultStyle"
+                android:text="@string/no_people_in_ic"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/inner_circle_page_contacts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/inner_circle_page_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ScrollbarStyle"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/no_result_contacts"
+                style="@style/NoResultStyle"
+                android:text="@string/no_phone_contacts"/>
+
+            <include layout="@layout/custom_generic_progress_indicator_small_noconstr"
+                android:id="@+id/progress_contacts"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/inner_circle_page_near_me_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout_near_me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/inner_circle_page_near_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ScrollbarStyle"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/no_result_near_me"
+                style="@style/NoResultStyle"
+                android:text="@string/no_people_near_me"/>
+
+            <LinearLayout
+                android:id="@+id/enable_location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/enable_loc_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/activity_margin_lg"
+                    android:paddingEnd="@dimen/activity_margin_lg"
+                    android:layout_marginBottom="@dimen/activity_margin_lg"
+                    style="@style/Regular16"
+                    android:text="@string/ic_geolocation_prompt_none"
+                    android:textColor="@color/colorAccent"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/enable_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    style="@style/Bold18"
+                    android:text="@string/action_enable"
+                    android:textAllCaps="true"
+                    android:textColor="@color/state_list_login"
+                    android:background="@drawable/background_button_login"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/custom_generic_progress_indicator_small_noconstr"
+                android:id="@+id/progress_near_me"/>
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

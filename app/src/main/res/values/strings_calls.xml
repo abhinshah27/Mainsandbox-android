@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <string name="call_notification_channel">Canale di notifica primario</string>
+    <string name="error_calls_video">Connessione alla traccia video del partecipante fallita</string>
+    <string name="error_calls_connection">Spiacenti, non siamo riusciti a connetterti all\'altra persona. Riprova.</string>
+    <string name="error_calls_unexpected">Ops, colpa nostra!</string>
+    <string name="calls_timer_disconnecting_3">Timeout raggiunto.\nDisconnessione in 3…</string>
+    <string name="calls_timer_disconnecting">Timeout raggiunto.\nIn disconnessione…</string>
+    <string name="calls_timer_disconnecting_num">Timeout raggiunto.\nDisconnessione in %d…</string>
+    <string name="call_type_text_voice">Chiamata Voce…</string>
+    <string name="call_type_text_video">Chiamata Video…</string>
+    <string name="error_calls_start">Servizio di chiamata al momento non disponibile</string>
+    <string name="calls_permiss_rationale_title">Permessi necessari</string>
+    <string name="calls_permiss_rationale_body">Garantendo a %s permessi audio e video potrai effettuare e ricevere chiamate audio e video.</string>
+    <string name="calls_permiss_rationale_body_w_phonestate">Garantendo a %s permessi audio, video e per il monitoraggio dell\'arrivo delle tue chiamate in entrata, potrai effettuare e ricevere chiamate audio e video, e ottenere la migliore esperienza di chiamata.</string>
+    <string name="calls_permiss_rationale_phonestate_body">Garantendo a %s il permesso di monitorare l\'arrivo delle tue chiamate in entrata, potrai ottenere la migliore esperienza di chiamata.</string>
+    <string name="calls_permiss_rationale_pos">Chiedi ancora</string>
+    <string name="calls_permiss_rationale_neg">Non ora</string>
+    <string name="calls_user_action_mute">%s ha chiuso il microfono</string>
+    <string name="calls_user_action_unmute">%s ha aperto il microfono</string>
+    <string name="calls_user_action_video">%s ha disabilitato il proprio video</string>
+    <string name="action_calls_hangup">Riaggancia</string>
+    <string name="action_calls_accept">Accetta</string>
+    <string name="action_calls_reject">Rifiuta</string>
+    <string name="call_declined">Chiamata respinta</string>
+    <string name="call_disconnecting">In disconnessione…</string>
+    <string name="call_connecting">In connessione…</string>
+    <string name="call_connected">Connesso</string>
+    <string name="call_ringing">Sta squillando…</string>
+    <string name="call_participant_left">%s ha riagganciato\nIn disconnessione…</string>
+    <string name="error_calls_busy">%s è al momento impegnato/a in un\'altra conversazione.\n\nRiprova più tardi.</string>
+    <string name="calls_missed_from">Chiamata persa da %s</string>
+    <string name="error_calls_hold">%s ha probabilmente ricevuto un\'altra chiamata.</string>
+    <string name="calls_dialog_end_pos">Chiudi chiamata</string>
+    <string name="calls_dialog_end_body">Premendo INDIETRO la tua chiamata sarà chiusa.\n\nVuoi continuare?</string>
+    <string name="calls_dialog_end_title">Chiamata in chiusura</string>
+
+</resources>

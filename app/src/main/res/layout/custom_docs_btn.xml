@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_margin_md"
+    android:paddingBottom="@dimen/activity_margin_md"
+    android:layout_marginEnd="@dimen/activity_margin_lg"
+    android:layout_marginStart="@dimen/activity_margin_lg"
+    style="@style/TextSemiBold"
+    android:text="@string/action_download_docs"
+    android:textAlignment="center"
+    android:textAllCaps="true"
+    android:textColor="@color/state_list_login_inverted"
+    android:background="@drawable/selector_button_profile_docs"
+    />

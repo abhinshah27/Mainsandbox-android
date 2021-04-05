@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/activity_margin">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/repeat_switch"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/repetitions_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/repeat_switch"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/repetitions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Light22"
+                android:textColor="@color/black_70"
+                android:text="@string/wish_no_repeat"/>
+
+            <TextView
+                android:id="@+id/repetitions_text_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                style="@style/Bold22"
+                android:textColor="@color/colorAccent"
+                android:text="@string/wish_no_repeat"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/repeat_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/repetitions_text_layout"
+            android:layout_marginTop="@dimen/activity_margin_lg"
+            android:alpha="0"
+            app:np_fadingEdgeEnabled="true"
+            app:np_textColor="@color/colorAccent"
+            app:np_selectedTextColor="@color/colorAccent"
+            app:np_dividerColor="@color/colorAccent"
+            app:np_min="1"
+            app:np_max="100"
+            app:np_scrollerEnabled="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+</ScrollView>

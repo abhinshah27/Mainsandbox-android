@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/upper_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_lg"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            style="@style/Regular20"
+            android:gravity="start"
+            android:textColor="@color/colorAccent"
+            tools:text="@string/settings_privacy_pv_sel_users"
+            />
+
+        <include
+            android:id="@+id/search_box"
+            layout="@layout/profile_search_box"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/btn_select_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".42"
+                android:paddingEnd="@dimen/activity_vertical_margin"
+                android:paddingStart="@dimen/activity_vertical_margin"
+                style="@style/Regular16"
+                android:gravity="end"
+                android:text="@string/action_select_all"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/btn_clear_selections"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".58"
+                android:paddingEnd="@dimen/activity_vertical_margin"
+                android:paddingStart="@dimen/activity_vertical_margin"
+                style="@style/Regular16"
+                android:gravity="start"
+                android:text="@string/action_clear_selection"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upper_section">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selections_list"
+                style="@style/ScrollbarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/no_result"
+            style="@style/NoResultStyle"
+            android:text="@string/no_member_in_circle"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.allattentionhere.autoplayvideos.AAH_CustomRecyclerView
+        android:id="@+id/list"
+        android:name="it.keybiz.lbsapp.activities_home.TimelineFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_post_picture"
+        tools:application="it.keybiz.lbsapp.corporate.features.HomeActivity"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</FrameLayout>

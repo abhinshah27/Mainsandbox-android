@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextWithShadow" parent="TextDefault">
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+
+    <style name="TextRegularWithShadow" parent="TextWithShadow">
+        <item name="android:fontFamily">@font/open_sans_regular</item>
+    </style>
+
+    <style name="RegularShadow14" parent="TextRegularWithShadow">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RegularShadow15" parent="TextRegularWithShadow">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="RegularShadow16" parent="TextRegularWithShadow">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="RegularShadow20" parent="TextRegularWithShadow">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="RegularShadow25" parent="TextRegularWithShadow">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="RegularShadow26" parent="TextRegularWithShadow">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+
+    <style name="TextBoldWithShadow" parent="TextWithShadow">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="BoldShadow16" parent="TextBoldWithShadow">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BoldShadow18" parent="TextBoldWithShadow">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BoldShadow20" parent="TextBoldWithShadow">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="TextSemiBoldWithShadow" parent="TextWithShadow">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+    </style>
+
+    <style name="SemiBoldShadow15" parent="TextSemiBoldWithShadow">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SemiBoldShadow18" parent="TextSemiBoldWithShadow">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>

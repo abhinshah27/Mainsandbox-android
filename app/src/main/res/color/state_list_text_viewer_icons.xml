@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/gray_disabled"
+        android:state_enabled="false"/>
+
+    <item android:color="@color/white"
+          android:state_selected="true"/>
+
+    <item android:color="@color/colorAccent"/>
+
+</selector>

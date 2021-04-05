@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ScrollbarStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_change_legacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_rounded_border"
+            android:paddingBottom="@dimen/activity_margin"
+            android:paddingEnd="@dimen/activity_margin"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/legacy_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                style="@style/Regular18"
+                android:text="@string/settings_legacy_text"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/change_legacy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/legacy_txt"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                style="@style/Regular16"
+                android:gravity="bottom"
+                android:text="@string/action_change"
+                android:textColor="@color/black_38" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/legacy_txt"
+                android:layout_marginTop="@dimen/activity_margin_lg"
+                android:layout_marginBottom="10dp">
+
+                <FrameLayout
+                    android:id="@+id/legacy_picture_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true">
+
+                    <include
+                        android:id="@+id/legacy_picture"
+                        layout="@layout/custom_layout_profile_picture_gray_border"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="bottom|end"
+                        app:srcCompat="@drawable/ic_wishes_active"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/legacy_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_margin_lg"
+                    android:layout_toEndOf="@id/legacy_picture_layout"
+                    android:ellipsize="end"
+                    style="@style/Regular18"
+                    android:textColor="@color/black_70"
+                    android:text="@string/txt_not_set"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_change_preferred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_rectangle_rounded_border"
+            android:paddingBottom="@dimen/activity_margin"
+            android:paddingEnd="@dimen/activity_margin"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/activity_margin"
+            >
+
+            <TextView
+                android:id="@+id/preferred_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                style="@style/Regular18"
+                android:text="@string/settings_preferred_text"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/change_preferred_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/preferred_txt"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                style="@style/Regular16"
+                android:gravity="bottom"
+                android:text="@string/action_change"
+                android:textColor="@color/black_38" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_preferred_btn"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/preferred_picture_layout"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_alignParentStart="true">
+
+                    <include
+                        android:id="@+id/preferred_picture"
+                        layout="@layout/custom_layout_profile_picture_gray_border"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginEnd="4dp"
+                        app:srcCompat="@drawable/ic_preferred_interest_small_short"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/preferred_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_margin_lg"
+                    android:layout_toEndOf="@id/preferred_picture_layout"
+                    android:ellipsize="end"
+                    style="@style/Regular18"
+                    android:textColor="@color/black_70"
+                    android:text="@string/txt_not_set"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/entries_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/activity_margin"/>
+
+    </LinearLayout>
+</ScrollView>

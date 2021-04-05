@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+
+    <integer name="interest_detail_description_lines">4</integer>
+
+    <integer name="slide_animation_time">250</integer>
+
+</resources>

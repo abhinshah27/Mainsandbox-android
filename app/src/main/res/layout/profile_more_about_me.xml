@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.gridlayout.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/more_about_me_title"
+    app:columnCount="2"
+    app:rowCount="12"
+    app:orientation="horizontal"
+    app:alignmentMode="alignBounds">
+
+    <TextView
+        android:id="@+id/label_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="center_vertical"
+        style="@style/Regular14"
+        android:textColor="@color/black_54"
+        android:text="@string/profile_more_gender"
+        android:maxLines="2" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_gravity="fill_horizontal"
+        android:paddingEnd="@dimen/activity_margin_lg">
+
+        <ImageView
+            android:id="@+id/spinner_indicator_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_signup_down_indicator"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_height="49dp"
+            android:layout_width="match_parent"
+            android:layout_toStartOf="@id/spinner_indicator_gender"
+            android:gravity="center_vertical"
+            android:background="@null"
+            tools:listitem="@layout/more_about_me_simple_spinner_item"
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="0dp"
+             app:layout_gravity="fill_horizontal"
+             android:layout_height="1dp"
+             app:layout_columnSpan="2"/>
+
+    <TextView
+        android:id="@+id/label_birthplace"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="center_vertical"
+        style="@style/Regular14"
+        android:textColor="@color/black_54"
+        android:text="@string/profile_more_birthplace"
+        android:maxLines="2" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        app:layout_gravity="fill_horizontal">
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/more_birth_text"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            style="@style/Regular15"
+            tools:text="Locri"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="visible"/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/more_birth_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Regular15"
+            tools:text="Gave birth to Joseph Robbins"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:inputType="textCapWords"
+            android:hint="@string/item_profile_event_descr_edit_hint"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="0dp"
+             app:layout_gravity="fill_horizontal"
+             android:layout_height="1dp"
+             app:layout_columnSpan="2"/>
+
+    <!-- [START] INFO: 3/18/19    modification "interestedIn" -->
+    <TextView
+        android:id="@+id/label_interestedin"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        style="@style/Regular14"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="center_vertical"
+        android:textColor="@color/black_54"
+        android:text="@string/profile_more_interestedin"
+        android:maxLines="2"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_gravity="fill_horizontal"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/spinner_indicator_interestedin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_signup_down_indicator"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Spinner
+            android:id="@+id/spinner_interestedin"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_toStartOf="@id/spinner_indicator_interestedin"
+            android:gravity="center_vertical"
+            android:background="@null"
+            tools:listitem="@layout/more_about_me_simple_spinner_item"
+            />
+        app:layout_gravity="fill_horizontal"
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="0dp"
+             app:layout_gravity="fill_horizontal"
+             android:layout_height="1dp"
+             app:layout_columnSpan="2"
+        android:visibility="gone"/>
+    <!-- [END] INFO: 3/18/19    modification "interestedIn" -->
+
+
+    <TextView
+        android:id="@+id/label_languages"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        style="@style/Regular14"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="center_vertical"
+        android:textColor="@color/black_54"
+        android:text="@string/profile_more_languages"
+        android:maxLines="2" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        app:layout_gravity="fill_horizontal">
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/more_languages_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            style="@style/Regular15"
+            tools:text="English, French, Italian, English, Italian"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:drawableEnd="@drawable/ic_signup_right_indicator"
+            android:drawablePadding="@dimen/activity_margin"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="0dp"
+             app:layout_gravity="fill_horizontal"
+             android:layout_height="1dp"
+             app:layout_columnSpan="2"/>
+
+
+    <TextView
+        android:id="@+id/label_address"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        style="@style/Regular14"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="center_vertical"
+        android:textColor="@color/black_54"
+        android:text="@string/profile_more_address"
+        android:maxLines="2" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        app:layout_gravity="fill_horizontal">
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/more_address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Regular15"
+            tools:text="London, United Kingdom"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="visible"/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/more_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Regular15"
+            tools:text="Gave birth to Joseph Robbins"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:layout_centerVertical="true"
+            android:inputType="textCapWords"
+            android:hint="@string/item_profile_event_descr_edit_hint"
+            android:maxLines="1"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="0dp"
+             app:layout_gravity="fill_horizontal"
+             android:layout_height="1dp"
+             app:layout_columnSpan="2"/>
+
+
+    <TextView
+        android:id="@+id/label_other_names"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        style="@style/Regular14"
+        android:textAllCaps="true"
+        android:paddingStart="@dimen/activity_margin_lg"
+        android:paddingEnd="@dimen/activity_margin_lg"
+        android:gravity="center_vertical"
+        android:textColor="@color/black_54"
+        android:text="@string/profile_more_other_names"
+        android:maxLines="2" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        app:layout_gravity="fill_horizontal">
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/more_other_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Regular15"
+            tools:text="Mec, BigMac"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="visible"/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/more_other_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Regular15"
+            tools:text="Gave birth to Joseph Robbins"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:inputType="textCapWords"
+            android:hint="@string/item_profile_event_descr_edit_hint"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="0dp"
+             app:layout_gravity="fill_horizontal"
+             android:layout_height="1dp"
+             app:layout_columnSpan="2"/>
+
+</androidx.gridlayout.widget.GridLayout>

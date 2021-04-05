@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@android:id/text1"
+          style="@style/Regular16"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:singleLine="true"
+          android:padding="8dp"
+          tools:text="item 1"
+          android:drawableEnd="@drawable/ic_signup_down_indicator"
+          android:drawableTop="@null"
+          android:drawableBottom="@null"
+          android:drawableStart="@null"/>

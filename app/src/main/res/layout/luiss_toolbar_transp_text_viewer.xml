@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    app:contentInsetStart="0dp"
+    app:contentInsetEnd="0dp"
+    android:background="@color/transparent"
+    android:duplicateParentState="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        tools:background="@color/black_12"
+        android:duplicateParentState="true">
+
+        <FrameLayout
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_button_round"
+            android:padding="@dimen/activity_margin_md"
+            android:layout_marginStart="@dimen/activity_margin_md"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_back_accent"
+                android:layout_gravity="center_vertical"
+                android:rotation="270"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/actionsBtns"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:duplicateParentState="true">
+
+            <TextView
+                android:id="@+id/textSmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/Bold16"
+                android:text="A"
+                android:textColor="@color/state_list_text_viewer_icons"
+                android:background="@drawable/selector_button_round"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textBigger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="@style/Bold24"
+                android:text="A"
+                android:textColor="@color/state_list_text_viewer_icons"
+                android:background="@drawable/selector_button_round"
+                android:padding="10dp" />
+
+            <ImageView
+                android:id="@+id/nightMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/selector_button_round"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_night_mode"
+                android:tint="@color/colorAccent"
+                android:duplicateParentState="true"
+                />
+
+        </LinearLayout>
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/back_arrow"
+            android:layout_toStartOf="@id/actionsBtns"
+            android:layout_centerVertical="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center"
+            style="@style/SemiBold20"
+            tools:text="Juventus F.C"
+            android:textColor="@color/state_list_text_viewer"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:duplicateParentState="true"/>
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

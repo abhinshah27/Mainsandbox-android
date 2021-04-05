@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <!--<string name="call_notification_channel">Primary call channel</string>-->
+    <!--<string name="error_calls_video">Failed to connect to participant\'s video track</string>-->
+    <!--<string name="error_calls_connection">Sorry, we couldn\'t connect you to the other person. Try again.</string>-->
+    <!--<string name="error_calls_unexpected">Sorry, our bad!</string>-->
+    <!--<string name="calls_timer_disconnecting_3">Timeout reached.\nDisconnecting in 3…</string>-->
+    <!--<string name="calls_timer_disconnecting">Timeout reached.\nDisconnecting…</string>-->
+    <!--<string name="calls_timer_disconnecting_num">Timeout reached.\nDisconnecting in %d…</string>-->
+    <!--<string name="call_type_text_voice">Voice call…</string>-->
+    <!--<string name="call_type_text_video">Video call…</string>-->
+    <!--<string name="error_calls_start">Call service currently unavailable</string>-->
+    <!--<string name="calls_permiss_rationale_title">Permissions needed</string>-->
+    <!--<string name="calls_permiss_rationale_body">By granting %s audio and video permissions you will be able to make and receive audio and video calls.</string>-->
+    <!--<string name="calls_permiss_rationale_body_w_phonestate">By granting %s audio, video and your incoming calls monitoring permissions you will be able to make and receive audio and video calls and to get the best call experience.</string>-->
+    <!--<string name="calls_permiss_rationale_phonestate_body">By granting %s incoming calls monitoring permissions you will be able to get the best call experience.</string>-->
+    <!--<string name="calls_permiss_rationale_pos">Ask again</string>-->
+    <!--<string name="calls_permiss_rationale_neg">Not now</string>-->
+    <!--<string name="calls_user_action_mute">%s muted the conversation</string>-->
+    <!--<string name="calls_user_action_unmute">%s unmuted the conversation</string>-->
+    <!--<string name="calls_user_action_video">%s has disabled video</string>-->
+    <!--<string name="action_calls_hangup">Hang up</string>-->
+    <!--<string name="action_calls_accept">Accept</string>-->
+    <!--<string name="action_calls_reject">Reject</string>-->
+    <!--<string name="call_declined">Call declined</string>-->
+    <!--<string name="call_disconnecting">Disconnecting…</string>-->
+    <!--<string name="call_connecting">Connecting…</string>-->
+    <!--<string name="call_connected">Connected</string>-->
+    <!--<string name="call_ringing">Ringing…</string>-->
+    <!--<string name="call_participant_left">%s left\nDisconnecting…</string>-->
+    <!--<string name="error_calls_busy">%s is currently busy in another conversation.\n\nPlease, try again later.</string>-->
+    <!--<string name="calls_missed_from">Missed call from %s</string>-->
+    <!--<string name="error_calls_hold">%s has likely answered to another incoming call.</string>-->
+    <!--<string name="calls_dialog_end_pos">End call</string>-->
+    <!--<string name="calls_dialog_end_body">By tapping BACK your call will be closed.\n\nContinue?</string>-->
+    <!--<string name="calls_dialog_end_title">Call about to end</string>-->
+
+</resources>

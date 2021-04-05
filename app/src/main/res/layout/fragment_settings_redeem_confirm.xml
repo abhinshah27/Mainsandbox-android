@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        style="@style/Regular22"
+        android:text="@string/settings_redeem_hearts"
+        android:textColor="@color/colorAccent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/confirm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin_lg"
+                android:layout_marginStart="@dimen/activity_margin_lg"
+                style="@style/Regular18"
+                android:text="@string/settings_redeem_confirmation"
+                android:textColor="@color/black_70" />
+
+            <RelativeLayout
+                android:id="@+id/btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/edit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        style="@style/SemiBold18"
+                        android:text="@string/option_comment_edit"
+                        android:textColor="@color/black_70"
+                        android:background="@drawable/selector_dialog_button_negative"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/confirm_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        style="@style/SemiBold20"
+                        android:text="@string/action_confirm"
+                        android:textColor="@color/colorAccent"
+                        android:background="@drawable/selector_dialog_button_positive"/>
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/confirm_text"
+                android:layout_above="@id/btn_layout"
+                style="@style/ScrollbarStyle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin_lg"
+                    android:layout_marginEnd="@dimen/activity_margin_lg"
+                    android:paddingStart="@dimen/activity_margin_lg"
+                    android:paddingEnd="@dimen/activity_margin_lg"
+                    android:gravity="center"
+                    android:paddingTop="40dp"
+                    android:paddingBottom="40dp"
+                    android:background="@color/divider_on_white"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Light16"
+                        android:text="@string/settings_redeem_confirmation_txt1"
+                        android:textColor="@color/black_70"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin_lg"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_full_heart_orange"
+                            android:layout_gravity="center_vertical"/>
+
+                        <TextView
+                            android:id="@+id/declared_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_margin_lg"
+                            style="@style/Regular24"
+                            android:textColor="@color/colorAccent"
+                            tools:text="1,000,000 Hearts"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin_lg"
+                        style="@style/Light16"
+                        android:text="@string/settings_redeem_confirmation_txt2"
+                        android:textColor="@color/black_70"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin_lg"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <include layout="@layout/custom_layout_profile_picture_gray_border_mkt"
+                                 android:id="@+id/mktplace_picture"
+                                 android:layout_width="40dp"
+                                 android:layout_height="40dp"/>
+
+                        <TextView
+                            android:id="@+id/converted_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_margin_lg"
+                            style="@style/Regular24"
+                            android:textColor="@color/colorAccent"
+                            tools:text="$4,800 Cash"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/redeem_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin_lg"
+                        style="@style/Light16"
+                        tools:text="via Wire Transfer"
+                        android:textColor="@color/black_70"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_margin_lg"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:layout_marginStart="@dimen/activity_margin_lg"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:alpha="0"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin_lg"
+                style="@style/SemiBold24"
+                android:text="@string/thanks"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                style="@style/Regular18"
+                android:text="@string/redeem_success_msg"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/done_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_button_redeem_white"
+                android:paddingBottom="8dp"
+                android:paddingEnd="40dp"
+                android:paddingStart="40dp"
+                android:paddingTop="8dp"
+                style="@style/Regular18"
+                android:text="@string/done"
+                android:textColor="@color/state_list_redeem_btn_overlay" />
+
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

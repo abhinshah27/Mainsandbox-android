@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_margin_lg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/preferred_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            app:srcCompat="@drawable/ic_preferred_interest_small"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/preferred_icon_invis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_preferred_interest_small"/>
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/interest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/preferred_icon_invis"
+            android:layout_toStartOf="@id/preferred_icon"
+            android:paddingTop="25dp"
+            style="@style/Bold20"
+            android:ellipsize="end"
+            android:gravity="bottom|center_horizontal"
+            android:maxLines="1"
+            tools:text="Juventus F.C."/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/interest_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/preferred_icon_invis"
+            android:layout_toStartOf="@id/preferred_icon"
+            android:paddingTop="25dp"
+            style="@style/Bold20"
+            android:ellipsize="end"
+            android:gravity="bottom|center_horizontal"
+            android:maxLines="1"
+            android:textColorHint="@color/black_38"
+            android:inputType="textCapWords"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:scrollHorizontally="true"
+            android:hint="@string/interest_detail_hint_name"
+            android:background="@null"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/headline_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible">
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/interest_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:ellipsize="end"
+            style="@style/Regular14"
+            android:maxLines="2"
+            tools:text="Association football club from Italy"
+            android:visibility="visible"/>
+
+        <androidx.emoji.widget.EmojiAppCompatEditText
+            android:id="@+id/interest_headline_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:scrollHorizontally="true"
+            style="@style/Regular14"
+            android:maxLines="2"
+            android:hint="@string/interest_detail_hint_headline"
+            android:textColorHint="@color/black_38"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+            android:background="@null"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/hearts_followers_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/hearts_total_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_wishes_button_black"/>
+
+            <TextView
+                android:id="@+id/count_heart_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-1dp"
+                style="@style/Bold18"
+                tools:text="123K"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/followers_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_aboutme_active"/>
+
+            <TextView
+                android:id="@+id/count_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-2dp"
+                style="@style/Bold18"
+                android:textColor="@color/colorAccent"
+                tools:text="20K followers"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

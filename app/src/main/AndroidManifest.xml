@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="it.keybiz.lbsapp.corporate">
+
+    <!-- [START] NORMAL PERMISSIONS ============================================================ -->
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Allows not to show a notification when downloading a file -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!-- Voice and Video calls permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- [END] NORMAL PERMISSIONS ============================================================== -->
+
+
+    <!-- [START] DANGEROUS PERMISSIONS ========================================================= -->
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- [END] DANGEROUS PERMISSIONS =========================================================== -->
+
+
+    <!-- FEATURES -->
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <!-- SUPPORTS -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="false"/>
+    <!--
+     "allowBackup" set to false because it prevented the Realm file to be deleted,
+         thus creating inconsistencies and unforeseen behaviors with the GUEST mode
+    -->
+    <application
+        android:name="it.keybiz.lbsapp.corporate.base.LBSLinkApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup,android:theme">
+
+        <!-- Library needed because targeting API 28 and using Maps SDK -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!-- FONTS -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"/>
+
+        <!-- SERVICES AND RECEIVERS -->
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.login.GetTimelineService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.services.SubscribeToSocketService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.services.SubscribeToSocketServiceChat"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.fcm.SendFCMTokenService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.profile.GetIdentitiesService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.services.FetchingOperationsService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.services.GetConfigurationDataService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.services.DeleteTempFileService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.connection.realTime.HandlePushedDataService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.chat.HandleChatsUpdateService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.chat.HandleUnsentMessagesService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.voiceVideoCalls.tmp.CallsService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.chat.HandleChatCreationService"
+            android:exported="false"/>
+        <service
+            android:name="it.keybiz.lbsapp.corporate.features.profile.LocationUpdateService"
+            android:exported="false"/>
+
+        <receiver
+            android:name="it.keybiz.lbsapp.corporate.connection.ServerMessageReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name="it.keybiz.lbsapp.corporate.connection.ConnectionChangeReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name="it.keybiz.lbsapp.corporate.connection.ScreenStateReceiver"
+            android:exported="false"/>
+
+        <service android:name="it.keybiz.lbsapp.corporate.fcm.FCMMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!-- Functions of this Service class have been transferred to FCMMessagingService#onNewToken(String) method -->
+        <!-- <service -->
+        <!-- android:name=".notifications.FCMInstanceIDListenerService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+
+        <!--
+        Set custom default icon. This is used when no icon is set for incoming notification messages.
+        See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_tray"/>
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent"/>
+
+        <!-- Set default notification channel -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notif_channel_default_description"/>
+
+        <!-- FABRIC -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4be7bbd3ae8a59362e4991823037facb5cd5d303"/>
+
+        <!-- FILE PROVIDER -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- The API key for Google Maps-based APIs. -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
+        <!-- ///////////// -->
+        <!-- ACTIVITIES -->
+        <!-- ///////////// -->
+
+
+        <!-- SPLASH -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.splash.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- LOGIN -->
+        <activity
+            android:name=".features.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <data android:scheme="luisssummerschool"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".features.login.SignupConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name=".features.login.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <!-- SELECT IDENTITY -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.profile.SelectIdentityActivity"
+            android:label="@string/title_activity_select_identity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- HOME -->
+        <!-- TODO   RETURN HERE FOR LANDSCAPE -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.HomeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_home"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- TODO   RETURN HERE FOR LANDSCAPE -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.timeline.LandscapeMediaActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.timeline.interactions.PostOverlayActionActivity"
+            android:theme="@style/TransparentInteractionTheme"
+            android:windowSoftInputMode="adjustResize"/>
+        <!--android:screenOrientation="portrait"-->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.timeline.interactions.InteractionsViewerActivity"
+            android:theme="@style/TransparentInteractionTheme"/>
+        <!--android:screenOrientation="portrait"-->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.createPost.CreatePostActivityMod"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.createPost.PostVisibilityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.createPost.CreatePostPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- VIEWERs -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.viewers.PhotoViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.viewers.VideoViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.timeline.interactions.TextViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- PROFILE -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.profile.SinglePostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- WISHES -->
+        <activity
+            android:name=".features.wishes.WishesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".features.wishes.PostPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentPostSelectionTheme"/>
+        <activity
+            android:name=".features.legacyContact.LegacyContactSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".features.wishes.SavedWishesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".features.wishes.WishesAccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- SETTINGS -->
+        <activity
+            android:name=".features.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- USER GUIDE -->
+        <activity
+            android:name=".features.userGuide.UserGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- VIEW TAGS -->
+        <activity
+            android:name=".features.tags.ViewAllTagsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- GLOBAL SEARCH -->
+        <activity
+            android:name=".features.globalSearch.GlobalSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- WEBVIEWs -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.viewers.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.viewers.WebViewActivityDocuments"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+        <!-- LANGUAGES SELECTION -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.profile.SelectLanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+        <!-- CHAT -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme"/>
+
+
+        <!-- CALLS -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.voiceVideoCalls.tmp.CallsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.voiceVideoCalls.CallsActivityNoService"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/ViewersTheme"/>
+
+
+        <!-- USER DOCUMENTATION -->
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.userDocumentation.LuissDocumentationActivity1List"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="it.keybiz.lbsapp.corporate.features.userDocumentation.LuissDocumentationActivity2Share"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+    </application>
+
+</manifest>

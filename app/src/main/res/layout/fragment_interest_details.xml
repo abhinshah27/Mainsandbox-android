@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/colorAccent"
+    tools:context=".features.profile.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/background_container"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:background="@color/black_10">
+
+                <FrameLayout
+                    android:id="@+id/close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="@dimen/activity_margin_lg">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/ic_close"
+                        android:background="@drawable/selector_button_round"
+                        android:duplicateParentState="true"/>
+                </FrameLayout>
+
+                <include layout="@layout/custom_layout_profile_picture"
+                         android:id="@+id/profile_picture"
+                         android:layout_width="100dp"
+                         android:layout_height="100dp"
+                         android:layout_marginTop="30dp"
+                         android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/interest_basic_info_layout"
+                     android:id="@+id/name_followers_section"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"/>
+
+            <View android:id="@+id/upper_divider"
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/divider_on_white"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/activity_margin_lg"
+                android:paddingBottom="@dimen/activity_margin_lg"
+                android:background="@color/white"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/about_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/activity_margin_lg"
+                    android:paddingEnd="@dimen/activity_margin_lg">
+
+                    <TextView
+                        android:id="@+id/about_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        style="@style/Bold18"
+                        android:text="@string/about_title"
+                        android:textColor="@color/black_70" />
+
+                    <ImageView
+                        android:id="@+id/about_edit"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        app:srcCompat="@drawable/ic_edit"/>
+
+                    <TextView
+                        android:id="@+id/about_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        style="@style/Regular14"
+                        android:text="@string/done"
+                        android:textColor="@color/black_70"
+                        android:textAllCaps="true"
+                        android:visibility="gone"/>
+
+                    <FrameLayout
+                        android:id="@+id/description_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/about_title">
+
+                        <androidx.emoji.widget.EmojiAppCompatTextView
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="@integer/interest_detail_description_lines"
+                            style="@style/Regular16"
+                            android:textColor="@color/black_54"
+                            android:ellipsize="end"
+                            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."/>
+
+                        <androidx.emoji.widget.EmojiAppCompatEditText
+                            android:id="@+id/description_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/Regular16"
+                            android:textColor="@color/black_54"
+                            android:textColorHint="@color/black_38"
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:textCursorDrawable="@drawable/custom_cursor_drawable"
+                            android:maxLines="@integer/interest_detail_description_lines"
+                            android:hint="@string/user_detail_hint_description"
+                            android:background="@null"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/read_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/description_container"
+                        android:padding="10dp"
+                        android:gravity="start|center_vertical"
+                        style="@style/Regular14"
+                        android:textColor="@color/black_70"
+                        android:text="@string/read_more"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/more_info_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/about_section"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/more_info_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/activity_margin_lg"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        style="@style/Bold18"
+                        android:text="@string/more_info_title"
+                        android:textColor="@color/black_70" />
+
+                    <ImageView
+                        android:id="@+id/more_info_edit"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="@dimen/activity_margin_lg"
+                        android:layout_marginTop="8dp"
+                        android:layout_gravity="top|end"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        app:srcCompat="@drawable/ic_edit"/>
+
+                    <TextView
+                        android:id="@+id/more_info_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/activity_margin_lg"
+                        android:layout_marginTop="8dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        style="@style/Regular14"
+                        android:text="@string/done"
+                        android:textColor="@color/black_70"
+                        android:textAllCaps="true"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/more_info_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_below="@id/more_info_title"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/public_info_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:background="@color/white">
+
+                <include layout="@layout/custom_divider"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/public_info_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="@dimen/activity_margin_lg"
+                        android:paddingEnd="@dimen/activity_margin_lg"
+                        style="@style/SemiBold12"
+                        tools:text="This page is automatically generated based on publicly available information and is not affiliated with or endorsed byHighlanders and the topic."
+                        android:textColor="@color/black_87" />
+
+                    <FrameLayout
+                        android:id="@+id/claim_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".22"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="@dimen/activity_margin_lg"
+                        android:visibility="gone">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            style="@style/SemiBold10"
+                            android:text="Claim"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

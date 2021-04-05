@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:paddingStart="@dimen/activity_margin_lg"
+    android:paddingEnd="@dimen/activity_margin_lg"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/white_95">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="@style/SemiBold17"
+        android:textColor="@color/black_70"
+        android:text="@string/claim_bottom_sheet_title"/>
+
+    <TextView
+        android:id="@+id/scan_file_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="@style/Regular16"
+        android:textColor="@color/colorAccent"
+        android:text="@string/claim_bottom_sheet_scan"/>
+
+    <TextView
+        android:id="@+id/choose_file_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="@style/Regular16"
+        android:textColor="@color/colorAccent"
+        android:text="@string/claim_bottom_sheet_choose"/>
+
+    <TextView
+        android:id="@+id/dialog_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="@style/Regular16"
+        android:textColor="@color/black_26"
+        android:text="@string/cancel"/>
+
+</LinearLayout>

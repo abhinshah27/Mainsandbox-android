@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical"
+                                                   android:paddingTop="10dp"
+                                                   android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:id="@+id/picturePlusIndicator"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/profilePicture"
+            layout="@layout/custom_layout_profile_picture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"/>
+
+        <View
+            android:id="@+id/availabilityIndicator"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_chat_availability"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/chatRoomName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        style="@style/SemiBold16"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/chatLastSeen"
+        app:layout_constraintStart_toEndOf="@+id/picturePlusIndicator"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Stefano Galizia ANDRIID"/>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/chatText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        style="@style/Regular14"
+        android:maxLines="1"
+        tools:text="TextView"
+        android:textColor="@color/black_70"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toReadCount"
+        app:layout_constraintStart_toEndOf="@+id/picturePlusIndicator"/>
+
+    <TextView
+        android:id="@+id/chatLastSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        style="@style/Regular14"
+        tools:text="TextView"
+        android:textColor="@color/black_54"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chatRoomName"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="20dp"
+        android:tint="@color/black_38"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_signup_right_indicator"
+        />
+
+    <TextView
+        android:id="@+id/toReadCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_rounded_orange"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        style="@style/SemiBold14"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/chatText"
+        app:layout_constraintEnd_toEndOf="@+id/chatLastSeen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/chatLastSeen"
+        app:layout_constraintTop_toTopOf="@+id/chatText"
+        tools:text="1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

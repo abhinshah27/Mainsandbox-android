@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/activity_margin_md"
+    android:paddingBottom="@dimen/activity_margin_md"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dateHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_margin"
+        style="@style/Regular14"
+        android:textColor="@color/black_54"
+        android:textAlignment="center"
+        android:visibility="visible"
+        tools:text="Tues, 09 Oct, 14:27"/>
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:background="@drawable/background_chat_outgoing_last"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/documentIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+
+        <androidx.emoji.widget.EmojiAppCompatTextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            style="@style/Regular16"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/infoFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/activity_margin_lg"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_gravity="end"
+        style="@style/Regular12"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black_54"
+        tools:text="Read, Tues 09 Oct, 14:33"/>
+
+</LinearLayout>

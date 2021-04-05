@@ -1,0 +1,20 @@
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="55dp"
+        android:height="55dp"
+        android:viewportWidth="55.0"
+        android:viewportHeight="55.0">
+    <path
+        android:pathData="M27.5,27.5m-26.5,0a26.5,26.5 0,1 1,53 0a26.5,26.5 0,1 1,-53 0"
+        android:fillType="evenOdd"
+        android:fillAlpha="0.5"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="@color/colorAccent"
+        android:strokeWidth="2"
+        android:strokeAlpha="0.608978714"/>
+</vector>

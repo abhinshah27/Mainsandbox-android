@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/dialog_flag_title"
+        style="@style/DialogTitle"
+        tools:text="@string/flag_report_post_title" />
+
+    <TextView
+        android:id="@+id/dialog_flag_message"
+        style="@style/DialogMessage"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="textStart"
+        tools:text="@string/flag_report_post_message" />
+
+    <androidx.emoji.widget.EmojiAppCompatEditText
+        android:id="@+id/report_post_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        style="@style/CommentEditTextStyleGen"
+        android:hint="@string/dialog_flag_report_hint"
+        android:gravity="top"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingTop="5dp"
+        android:background="@drawable/background_et_report_post"/>
+
+    <TextView
+        android:id="@+id/error_empty_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        style="@style/Regular16"
+        android:textColor="@color/hl_red"
+        android:text="@string/error_report_empty_message"
+        android:paddingTop="5dp"
+        android:alpha="0"/>
+
+    <include layout="@layout/generic_dialog_section_buttons"/>
+
+</LinearLayout>

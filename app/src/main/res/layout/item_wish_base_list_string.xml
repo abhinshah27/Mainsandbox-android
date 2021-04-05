@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:paddingStart="@dimen/activity_margin_lg"
+              android:paddingEnd="@dimen/activity_margin_lg"
+    android:background="@drawable/selector_background_wish_item_list">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:visibility="visible"
+        android:duplicateParentState="true"/>
+
+    <TextView
+        android:id="@+id/action_added_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical|end"
+        style="@style/Regular14"
+        android:textStyle="italic"
+        android:textColor="@color/color_state_wish_item_list"
+        tools:text="Your action here"
+        android:duplicateParentState="true"/>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/action_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/action_added_string"
+        android:layout_toEndOf="@id/icon"
+        android:layout_centerVertical="true"
+        android:gravity="start"
+        style="@style/Regular16"
+        android:textColor="@color/color_state_wish_item_list"
+        tools:text="Your action here"
+        android:duplicateParentState="true"/>
+</RelativeLayout>

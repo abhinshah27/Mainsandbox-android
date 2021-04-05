@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DialogTitle" parent="Bold20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginBottom">@dimen/activity_margin_lg</item>
+    </style>
+
+    <style name="DialogMessage" parent="Regular18">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="DialogMessage.EditText" parent="DialogMessage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textCursorDrawable">@drawable/custom_cursor_drawable</item>
+    </style>
+
+
+    <style name="DialogButtonStyle" parent="Bold18">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="DialogButtonStylePositive" parent="DialogButtonStyle">
+        <item name="android:background">@drawable/selector_dialog_button_positive</item>
+        <item name="android:textColor">@color/color_state_dialog_button_positive</item>
+    </style>
+
+    <style name="DialogButtonStyleNegative" parent="DialogButtonStyle">
+        <item name="android:background">@drawable/selector_dialog_button_negative</item>
+    </style>
+
+</resources>

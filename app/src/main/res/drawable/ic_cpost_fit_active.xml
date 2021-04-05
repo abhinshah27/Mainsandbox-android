@@ -1,0 +1,16 @@
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector android:height="96dp" android:viewportHeight="96.40926"
+    android:viewportWidth="93.40926" android:width="96dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillAlpha="1" android:fillColor="#FF000000"
+        android:pathData="M4.7046,48.2047a43.5,42 89.9999,1 0,84 -0.0002a43.5,42 89.9999,1 0,-84 0.0002z"
+        android:strokeAlpha="1" android:strokeColor="@color/transparent" android:strokeWidth="2"/>
+    <path android:fillAlpha="1" android:fillColor="@color/white"
+        android:fillType="evenOdd" android:pathData="M38,58.8767L38,65.136C38,65.7559 38.4863,66.2576 39.0847,66.2576C39.6856,66.2576 40.172,65.756 40.172,65.136L40.172,56.1712C40.172,55.5513 39.6856,55.0496 39.0847,55.0496L30.3942,55.0496C29.7933,55.0496 29.307,55.5513 29.307,56.1712C29.307,56.7885 29.7933,57.2902 30.3942,57.2902L36.462,57.2902L27.4535,66.5859C27.0283,67.0219 27.0283,67.7311 27.4535,68.1698C27.8787,68.6084 28.5662,68.6084 28.9889,68.1698L38,58.8767Z"/>
+    <path android:fillAlpha="1" android:fillColor="@color/white"
+        android:fillType="evenOdd" android:pathData="M55.3809,37.7738L55.3809,31.5145C55.3809,30.8946 54.8945,30.3929 54.2961,30.3929C53.6952,30.3929 53.2088,30.8946 53.2088,31.5145L53.2088,40.4793C53.2088,41.0992 53.6952,41.6009 54.2961,41.6009L62.9866,41.6009C63.5875,41.6009 64.0739,41.0992 64.0739,40.4793C64.0739,39.862 63.5875,39.3603 62.9866,39.3603L56.9188,39.3603L65.9273,30.0647C66.3525,29.6286 66.3525,28.9194 65.9273,28.4807C65.5021,28.0421 64.8146,28.0421 64.3919,28.4807L55.3809,37.7738Z"/>
+</vector>

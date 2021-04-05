@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    >
+
+    <View
+        android:id="@+id/icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/selector_item_list"
+        android:layout_centerVertical="true"/>
+
+    <androidx.emoji.widget.EmojiAppCompatTextView
+        android:id="@+id/list_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        style="@style/SemiBold18"
+        android:textAllCaps="false"
+        android:textColor="@color/color_state_item_list"
+        tools:text="Family Memories"
+        android:layout_centerVertical="true"/>
+
+    <include layout="@layout/custom_divider"
+             android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

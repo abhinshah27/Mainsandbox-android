@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="18dp"
+             android:layout_height="18dp"
+             android:background="@drawable/custom_wish_checkbox">
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:duplicateParentState="true"
+        android:layout_gravity="center"
+        android:tint="@color/color_state_wish_custom_checkbox_tick"
+        app:srcCompat="@drawable/ic_tick_white"/>
+
+</FrameLayout>

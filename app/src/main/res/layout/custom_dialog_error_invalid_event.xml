@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/dialog_event_title"
+        style="@style/DialogTitle"
+        android:text="@string/invalid_events_title" />
+
+    <TextView
+        android:id="@+id/dialog_event_message"
+        android:layout_marginBottom="20dp"
+        style="@style/DialogMessage"
+        android:textAlignment="textStart"
+        android:text="@string/invalid_events_message" />
+
+    <include layout="@layout/generic_dialog_section_buttons"/>
+
+</LinearLayout>

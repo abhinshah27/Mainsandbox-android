@@ -1,0 +1,31 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="97dp"
+        android:height="97dp"
+        android:viewportWidth="97.0"
+        android:viewportHeight="97.0">
+    <path
+        android:pathData="M48.5,48.5m-47.5,0a47.5,47.5 0,1 1,95 0a47.5,47.5 0,1 1,-95 0"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillAlpha="1"
+        android:fillColor="@color/transparent"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M48.5,48.5m-47.5,0a47.5,47.5 0,1 1,95 0a47.5,47.5 0,1 1,-95 0"
+        android:fillType="evenOdd"
+        android:strokeColor="@color/colorAccent"
+        android:fillColor="#00000000"
+        android:strokeWidth="2"/>
+    <path
+        android:pathData="M44.86,64.54L44.88,64.54C45.71,64.53 46.37,63.84 46.36,63.02L45.86,34.62C45.84,33.8 45.17,33.15 44.36,33.15L44.33,33.15C43.5,33.17 42.84,33.85 42.86,34.68L43.36,63.07C43.37,63.89 44.04,64.54 44.86,64.54ZM52.17,64.54C52.98,64.54 53.65,63.89 53.67,63.07L54.17,34.68C54.18,33.85 53.52,33.17 52.7,33.15L52.67,33.15C51.85,33.15 51.18,33.8 51.17,34.62L50.67,63.02C50.65,63.84 51.31,64.53 52.14,64.54L52.17,64.54ZM62.01,33.15L61.96,33.15C61.15,33.15 60.48,33.79 60.46,34.6L59.46,65.72C59.46,66.43 58.89,67.01 58.18,67.01L38.85,67.01C38.14,67.01 37.57,66.43 37.56,65.67L36.56,34.6C36.54,33.79 35.87,33.15 35.07,33.15L35.02,33.15C34.19,33.18 33.54,33.87 33.57,34.69L34.57,65.71C34.57,68.08 36.49,70 38.85,70L58.18,70C60.54,70 62.46,68.08 62.46,65.76L63.46,34.69C63.48,33.87 62.84,33.18 62.01,33.15L62.01,33.15ZM64.52,28.15L57.93,28.15C56.83,24.78 53.48,22.87 48.51,22.87C43.55,22.87 40.2,24.78 39.09,28.15L32.5,28.15C31.67,28.15 31,28.82 31,29.65C31,30.48 31.67,31.15 32.5,31.15L64.52,31.15C65.35,31.15 66.02,30.48 66.02,29.65C66.02,28.82 65.35,28.15 64.52,28.15L64.52,28.15ZM42.41,28.15C43.64,26.32 46.28,25.87 48.51,25.87C50.75,25.87 53.38,26.32 54.62,28.15L42.41,28.15Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="@color/colorAccent"
+        android:strokeWidth="1"/>
+</vector>

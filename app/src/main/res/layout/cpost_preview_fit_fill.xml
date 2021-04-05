@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:paddingBottom="@dimen/activity_margin_lg">
+
+    <ImageView
+        android:id="@+id/btnFill"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textFill2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selector_cpost_fill" />
+
+    <ImageView
+        android:id="@+id/btnFit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@drawable/selector_cpost_fit" />
+
+    <TextView
+        android:id="@+id/textFill1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Regular15"
+        android:text="@string/cpost_prev_fill"
+        app:layout_constraintBottom_toTopOf="@+id/textFill2"
+        app:layout_constraintStart_toStartOf="@+id/textFill2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textFill2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        style="@style/Regular15"
+        android:text="@string/cpost_prev_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@+id/textFill1" />
+
+    <TextView
+        android:id="@+id/textFit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Regular15"
+        android:text="@string/cpost_prev_keep"
+        app:layout_constraintBottom_toTopOf="@+id/textFit2"
+        app:layout_constraintStart_toStartOf="@+id/textFit2"
+        app:layout_constraintTop_toTopOf="@+id/btnFit"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textFit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        style="@style/Regular15"
+        android:text="@string/cpost_prev_prop"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFit"
+        app:layout_constraintStart_toEndOf="@+id/btnFit"
+        app:layout_constraintTop_toBottomOf="@+id/textFit1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

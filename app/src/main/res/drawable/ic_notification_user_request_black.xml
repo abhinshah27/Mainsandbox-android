@@ -1,0 +1,24 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="38dp"
+        android:height="36dp"
+        android:viewportWidth="38.0"
+        android:viewportHeight="36.0">
+    <path
+        android:pathData="M26.57,25.88C26.66,29.12 29.31,31.71 32.57,31.71C33.67,31.71 34.69,31.42 35.58,30.91C35.67,31.25 35.71,31.6 35.71,31.97L35.71,35.71L0,35.71L0,31.97C0,30.15 1.18,28.6 2.81,28.05C2.94,28.01 11.3,25.87 12.5,23.5C13.05,22.41 12.51,21.02 11.96,20.06C11.71,19.73 11.47,19.37 11.24,19C11.24,19 11.23,19 11.23,19C9.82,16.73 8.74,13.75 8.63,10.06C8.46,4.52 12.75,0.01 17.84,0L17.86,0L17.87,0C22.96,0.01 27.25,4.52 27.09,10.06C26.98,13.75 25.9,16.73 24.48,19L24.48,19C24.25,19.37 24,19.73 23.75,20.06C23.21,21.02 22.67,22.41 23.21,23.5C23.65,24.35 25,25.18 26.57,25.88Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="#000000"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M37.71,25.71C37.71,22.88 35.41,20.57 32.57,20.57C29.73,20.57 27.43,22.88 27.43,25.71C27.43,28.55 29.73,30.86 32.57,30.86C35.41,30.86 37.71,28.55 37.71,25.71ZM33.31,28.29L31.84,28.29L31.84,26.45L30,26.45L30,24.98L31.84,24.98L31.84,23.14L33.31,23.14L33.31,24.98L35.14,24.98L35.14,26.45L33.31,26.45L33.31,28.29Z"
+        android:strokeColor="#00000000"
+        android:fillType="nonZero"
+        android:fillColor="#000000"
+        android:strokeWidth="1"/>
+</vector>

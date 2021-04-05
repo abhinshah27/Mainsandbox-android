@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="false">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        app:auto_show="true"
+        app:hide_on_touch="true"
+        app:resize_mode="fit"
+        app:use_controller="true" />
+
+    <View
+        android:id="@+id/placeholder_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider_on_white" />
+
+    <ImageView
+        android:id="@+id/thumbnail_placeholder"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_placeholder_video" />
+
+    <ImageView
+        android:id="@+id/video_view_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/video_view_thumbnail_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="placeholder_background,thumbnail_placeholder,video_view_thumbnail" />
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_round"
+        android:baselineAlignBottom="true"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/layer_close" />
+
+
+    <ImageView
+        android:id="@+id/share_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_round"
+        android:baselineAlignBottom="true"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/close_btn"
+        app:layout_constraintEnd_toStartOf="@+id/close_btn"
+        app:layout_constraintTop_toTopOf="@+id/close_btn"
+        app:srcCompat="@drawable/layer_share2" />
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/custom_generic_progress_indicator_small_noconstr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

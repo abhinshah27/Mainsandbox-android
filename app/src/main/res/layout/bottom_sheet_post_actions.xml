@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/post_bottom_sheet_other"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_gravity="bottom"
+              android:background="@color/white_95">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_26"/>
+
+    <LinearLayout
+        android:id="@+id/layout_own"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_edit"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_sheet_item_height">
+
+            <ImageView
+                android:id="@+id/icon_edit"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/selector_bottom_sheet_edit"
+                android:duplicateParentState="true"/>
+
+            <TextView
+                android:id="@+id/text_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_edit"
+                style="@style/Regular20"
+                android:text="@string/option_post_edit"
+                android:textColor="@color/color_state_bottom_sheet_edit"
+                android:duplicateParentState="true"/>
+
+            <include layout="@layout/custom_divider"
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_delete"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_sheet_item_height">
+
+            <ImageView
+                android:id="@+id/icon_delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_trash_outline_red"/>
+
+            <TextView
+                android:id="@+id/text_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_delete"
+                style="@style/Regular20"
+                android:text="@string/option_post_delete"
+                android:textColor="@color/hl_red" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_hide"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_sheet_item_height">
+
+            <FrameLayout
+                android:id="@+id/icon_hide"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_public_post_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:rotation="135"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_hide"
+                style="@style/Regular20"
+                android:text="@string/option_post_hide"/>
+
+            <include layout="@layout/custom_divider"
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_report"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_sheet_item_height">
+
+            <ImageView
+                android:id="@+id/icon_report"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_report_icon"/>
+
+            <TextView
+                android:id="@+id/text_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_report"
+                style="@style/Regular20"
+                android:text="@string/option_post_report"
+                android:textColor="@color/hl_red" />
+
+            <include layout="@layout/custom_divider"
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_block"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_sheet_item_height">
+
+            <ImageView
+                android:id="@+id/icon_block"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_onlyme_post_red"/>
+
+            <TextView
+                android:id="@+id/text_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_block"
+                style="@style/Regular20"
+                android:text="@string/option_post_block"
+                android:textColor="@color/hl_red" />
+        </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/item_un_follow"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/comment_sheet_item_height">
+
+            <ImageView
+                android:id="@+id/icon_un_follow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                app:srcCompat="@drawable/ic_bottomsheet_plus"/>
+
+            <TextView
+                android:id="@+id/text_un_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon_un_follow"
+                style="@style/Regular20"
+                android:text="@string/action_follow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/custom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_share"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comment_sheet_item_height">
+
+        <ImageView
+            android:id="@+id/icon_share"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_share2_black"/>
+
+        <TextView
+            android:id="@+id/text_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/icon_share"
+            style="@style/Regular20"
+            android:text="@string/action_share" />
+
+        <ProgressBar
+            android:id="@+id/progress_share"
+            style="?android:attr/progressBarStyle"
+            android:layout_toEndOf="@id/text_share"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

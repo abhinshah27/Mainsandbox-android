@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2019. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_margin_lg"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/textLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Regular14"
+        android:text="@string/cpost_prev_txt_lg"
+        app:layout_constraintBottom_toTopOf="@+id/btnSizeLarge"
+        app:layout_constraintEnd_toStartOf="@+id/textMedium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSizeLarge" />
+
+    <TextView
+        android:id="@+id/textMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Regular14"
+        android:text="@string/cpost_prev_txt_md"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textLarge"
+        app:layout_constraintEnd_toStartOf="@+id/textSmall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textLarge" />
+
+    <TextView
+        android:id="@+id/textSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Regular14"
+        android:text="@string/cpost_prev_txt_sm"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textMedium" />
+
+    <TextView
+        android:id="@+id/btnSizeLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SemiBold70"
+        android:text="T"
+        android:textColor="@color/color_state_cpost_preview_text"
+        app:layout_constraintBottom_toTopOf="@+id/textLarge"
+        app:layout_constraintEnd_toEndOf="@+id/textLarge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textLarge"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnSizeMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SemiBold40"
+        android:text="T"
+        android:textColor="@color/color_state_cpost_preview_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSizeLarge"
+        app:layout_constraintEnd_toEndOf="@+id/textMedium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textMedium" />
+
+    <TextView
+        android:id="@+id/btnSizeSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/activity_margin"
+        android:paddingStart="@dimen/activity_margin"
+        style="@style/SemiBold20"
+        android:text="T"
+        android:textColor="@color/color_state_cpost_preview_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSizeMedium"
+        app:layout_constraintEnd_toEndOf="@+id/textSmall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textSmall" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

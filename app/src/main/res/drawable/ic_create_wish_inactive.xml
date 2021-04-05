@@ -1,0 +1,31 @@
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector android:height="356dp" android:viewportHeight="348.0"
+    android:viewportWidth="356.0" android:width="356dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillAlpha="0.03" android:fillColor="#FF5F00"
+        android:fillType="evenOdd"
+        android:pathData="M3,174.1a175,171.1 0,1 0,350 0a175,171.1 0,1 0,-350 0z"
+        android:strokeColor="@color/colorAccent" android:strokeWidth="5"/>
+    <path android:fillColor="@color/colorAccent" android:fillType="evenOdd"
+        android:pathData="M181.6,61l33.9,63.1l67.7,14.3l-46.8,53.3l8,72l-62.8,-30.2l-62.8,30.2l8,-72l-46.8,-53.3l67.7,-14.3z"
+        android:strokeColor="#00000000" android:strokeWidth="1"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M239.5,104.5L263.5,80.5"
+        android:strokeColor="@color/colorAccent" android:strokeLineCap="square" android:strokeWidth="2"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M68.5,242.5L92.5,218.5"
+        android:strokeColor="@color/colorAccent" android:strokeLineCap="square" android:strokeWidth="2"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M181,316L181,282"
+        android:strokeColor="@color/colorAccent" android:strokeLineCap="square" android:strokeWidth="2"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M256,219.2L285.4,236.2"
+        android:strokeColor="@color/colorAccent" android:strokeLineCap="square" android:strokeWidth="2"/>
+    <path android:fillColor="#00000000" android:fillType="evenOdd"
+        android:pathData="M79,95.2L108.4,112.2"
+        android:strokeColor="@color/colorAccent" android:strokeLineCap="square" android:strokeWidth="2"/>
+</vector>

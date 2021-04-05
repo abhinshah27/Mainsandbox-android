@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal"
+    android:layout_gravity="end">
+
+    <Button
+        android:id="@+id/button_negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DialogButtonStyleNegative"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/cancel"
+        android:textColor="@color/black_38"
+        />
+
+    <Button
+        android:id="@+id/button_positive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/DialogButtonStylePositive"
+        tools:text="@string/action_block"
+        />
+
+</LinearLayout>

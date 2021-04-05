@@ -1,0 +1,23 @@
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector android:height="140dp" android:viewportHeight="139.81853"
+    android:viewportWidth="140.81853" android:width="141dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillAlpha="1" android:fillColor="#FFFFFF" android:pathData="M15.375,69.991a55,55 0,1 0,110 0a55,55 0,1 0,-110 0z"/>
+    <path android:fillAlpha="0" android:fillColor="#FF000000"
+        android:pathData="M15.375,69.991a55,55 0,1 0,110 0a55,55 0,1 0,-110 0z"
+        android:strokeAlpha="1" android:strokeColor="#FFFFFF" android:strokeWidth="4"/>
+    <path android:fillAlpha="1" android:fillColor="#000000"
+        android:fillType="evenOdd" android:pathData="M80.669,57.053L80.669,55.663C80.669,50.58 76.495,46.409 71.415,46.409C66.333,46.409 62.161,50.58 62.161,55.663L62.161,71.389C62.161,72.62 62.43,73.797 62.858,74.866L80.669,57.053Z"/>
+    <path android:fillAlpha="1" android:fillColor="#000000"
+        android:fillType="evenOdd" android:pathData="M80.669,71.336L80.669,64.65L66.226,79.093C67.723,80.109 69.488,80.698 71.415,80.698C76.497,80.643 80.668,76.472 80.669,71.336Z"/>
+    <path android:fillAlpha="1" android:fillColor="#000000"
+        android:fillType="evenOdd" android:pathData="M60.824,76.9C59.968,75.241 59.487,73.369 59.487,71.389L59.487,65.076C59.487,64.167 58.791,63.47 57.882,63.47C56.972,63.47 56.276,64.167 56.276,65.076L56.276,71.387C56.276,74.276 57.079,76.95 58.469,79.25L60.824,76.9Z"/>
+    <path android:fillAlpha="1" android:fillColor="#000000"
+        android:fillType="evenOdd" android:pathData="M84.948,63.473C84.039,63.473 83.343,64.169 83.343,65.078L83.343,71.389C83.343,77.969 77.994,83.317 71.415,83.317C68.74,83.317 66.332,82.461 64.301,80.965L62.001,83.264C64.195,84.976 66.869,86.154 69.758,86.42L69.758,90.593L64.729,90.593C63.82,90.593 63.124,91.289 63.124,92.198C63.124,93.108 63.82,93.804 64.729,93.804L77.995,93.804C78.904,93.804 79.6,93.108 79.6,92.198C79.6,91.289 78.904,90.593 77.995,90.593L73.021,90.593L73.021,86.42C80.616,85.619 86.554,79.2 86.554,71.389L86.554,65.076C86.554,64.167 85.858,63.473 84.948,63.473Z"/>
+    <path android:fillAlpha="1" android:fillColor="#000000"
+        android:fillType="evenOdd" android:pathData="M90.94,50.58C90.299,49.939 89.282,49.939 88.694,50.58L51.89,87.384C51.249,88.025 51.249,89.043 51.89,89.63C52.211,89.952 52.639,90.112 53.014,90.112C53.389,90.112 53.817,89.952 54.138,89.63L90.94,52.828C91.581,52.185 91.581,51.223 90.94,50.58Z"/>
+</vector>

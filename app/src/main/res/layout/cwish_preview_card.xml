@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+                                   android:layout_gravity="center"
+                                   android:layout_margin="@dimen/activity_margin_lg"
+                                   app:cardBackgroundColor="@color/divider_on_white"
+                                   app:cardCornerRadius="8dp">
+
+    <ImageView
+        android:id="@+id/placeholder_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_placeholder_image"/>
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:background="@color/colorAccent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/background_rounded_4_black_alpha">
+
+        <FrameLayout
+            android:id="@+id/title_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="@style/Bold16"
+                android:layout_marginBottom="10dp"
+                tools:text="100th Birthday Wish"
+                android:textColor="@color/white"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/button_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/btn_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/activity_margin_lg"
+                android:layout_marginEnd="@dimen/activity_margin_lg"
+                style="@style/Bold16"
+                android:background="@drawable/selector_wish_preview_button"
+                android:textColor="@color/color_state_wish_preview_button"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="@string/wish_preview_save"/>
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_section"
+            android:layout_above="@id/button_section"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        style="@style/Regular11"
+                        android:textColor="@color/white"
+                        android:text="@string/cwish_trigger"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/trigger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        style="@style/SemiBold16"
+                        tools:text="A life events of a person in my innercirclevvvvvvvvvvvvvvv"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cwish_layout_repetitions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        style="@style/Regular11"
+                        android:textColor="@color/white"
+                        android:text="@string/cwish_repeat"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/repeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SemiBold16"
+                        android:textAlignment="center"
+                        tools:text="7 times"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        style="@style/Regular11"
+                        android:textColor="@color/white"
+                        android:text="@string/cwish_action"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SemiBold16"
+                        android:textAlignment="center"
+                        tools:text="Post to Highlanders"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        style="@style/Regular11"
+                        android:textColor="@color/white"
+                        android:text="@string/cwish_to"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SemiBold16"
+                        android:textAlignment="center"
+                        tools:text="Inner Circle"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

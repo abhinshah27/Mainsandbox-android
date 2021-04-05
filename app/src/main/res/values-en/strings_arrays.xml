@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- PROFILE -->
+    <!--<string name="relationship_single">Single</string>-->
+    <!--<string name="relationship_in_a_rel">In a Relationship</string>-->
+    <!--<string name="relationship_married">Married</string>-->
+    <!--<string name="relationship_widower">Widower</string>-->
+    <!--<string name="relationship_widow">Widow</string>-->
+
+    <!--<string name="profile_more_gender_m">Male</string>-->
+    <!--<string name="profile_more_gender_f">Female</string>-->
+
+    <!--<string name="profile_more_interestedin_m">Men</string>-->
+    <!--<string name="profile_more_interestedin_w">Women</string>-->
+
+
+    <!--&lt;!&ndash; SETTINGS &ndash;&gt;-->
+    <!--<string name="settings_main_account">Account Settings</string>-->
+    <!--<string name="settings_main_inner_circle">Feed &amp; Contents Settings</string>-->
+    <!--<string name="settings_main_lists">Folders</string>-->
+    <!--<string name="settings_main_privacy">Privacy</string>-->
+    <!--<string name="settings_main_security">Security</string>-->
+    <!--<string name="settings_main_payment">Payment</string>-->
+    <!--<string name="settings_main_help">Help &amp; Support</string>-->
+
+    <!--<string name="settings_ic_circles">My Circles</string>-->
+    <!--<string name="settings_ic_feed">Timeline Feed Preferences</string>-->
+    <!--<string name="settings_ic_legacy_to">You are Legacy Contact to</string>-->
+
+    <!--<string name="settings_ic_feed_sort">Default Sort Order</string>-->
+    <!--<string name="settings_ic_feed_autoplay">Auto-play Video</string>-->
+
+    <!--<string name="settings_ic_sort_recent">Most Recent</string>-->
+    <!--<string name="settings_ic_sort_loved">Most Loved</string>-->
+    <!--<string name="settings_ic_sort_shuffle">Shuffle</string>-->
+
+    <!--<string name="settings_ic_feed_ap_both">On Mobile Data and Wifi Connections</string>-->
+    <!--<string name="settings_ic_feed_ap_wifi">On Wifi Connections Only</string>-->
+    <!--<string name="settings_ic_feed_ap_never">Never Auto-play Videos</string>-->
+
+    <!--<string name="settings_privacy_policy">Privacy Policy</string>-->
+    <!--<string name="settings_privacy_post_visib">Post Visibility</string>-->
+    <!--<string name="settings_privacy_include_ic">Who can include me in their Network</string>-->
+    <!--<string name="settings_privacy_see_ic">Who can see my Network</string>-->
+    <!--<string name="settings_privacy_look_up">Who can look me up</string>-->
+    <!--<string name="settings_privacy_comment">Who can comment on my posts</string>-->
+    <!--<string name="settings_privacy_review_tag">Review posts friends tag you in before they appear on your diary</string>-->
+    <!--<string name="settings_privacy_block">Blocked</string>-->
+    <!--<string name="settings_privacy_chat">Who can send me direct messages</string>-->
+    <!--<string name="settings_privacy_voice">Who can voice call me</string>-->
+    <!--<string name="settings_privacy_video">Who can video call me</string>-->
+
+    <!--<string name="settings_privacy_pv_ic">@string/inner_circle</string>-->
+    <!--<string name="settings_privacy_pv_public">@string/label_privacy_everyone</string>-->
+    <!--<string name="settings_privacy_pv_me">@string/label_privacy_only_me</string>-->
+    <!--<string name="settings_privacy_pv_sel_users">@string/label_privacy_sel_users</string>-->
+    <!--<string name="settings_privacy_pv_sel_circles">@string/label_privacy_sel_circles</string>-->
+
+    <!--<string name="settings_security_legacy_trigger">Legacy Contact Trigger</string>-->
+    <!--<string name="settings_security_delete_account">Delete account</string>-->
+
+    <!--<string name="settings_security_lct_2step_title">2-Step Verification</string>-->
+    <!--<string name="settings_security_lct_inactivity_title">Wait for Inactivity</string>-->
+    <!--<string name="settings_security_lct_paper_title">Require Paper Certificate</string>-->
+    <!--<string name="settings_security_lct_2step_mess">You may set additional 2-Step Verification Contacts which will have to confirm you have become Digital Only once your Legacy Contact has notified us that you have departed and you became Digital Only.</string>-->
+    <!--<string name="settings_security_lct_inactivity_mess">You can set a period of time after which, if we recorded no activity on your Highlanders Account, your Legacy Contact has notified us that you have departed, and it has been confirmed by your 2-Step Verification Contacts (if any), you will become Digital Only.</string>-->
+    <!--<string name="settings_security_lct_paper_mess">Require Paper Certificate from your Legacy Contact to be sent to admin@highlande.rs in order to verify and confirm that you became Digital Only.</string>-->
+    <!--<string name="settings_security_lct_paper_mess_email">admin@highlande.rs</string>-->
+
+    <!--<string name="settings_security_lct_inact_hours">Hours</string>-->
+    <!--<string name="settings_security_lct_inact_days">Days</string>-->
+    <!--<string name="settings_security_lct_inact_weeks">Weeks</string>-->
+    <!--<string name="settings_security_lct_inact_months">Months</string>-->
+    <!--<string name="settings_security_lct_inact_years">Years</string>-->
+
+
+    <!--<string name="settings_help_user_guide">User Guide</string>-->
+    <!--<string name="settings_help_contact">Contact Us</string>-->
+
+    <!--<string name="help_contact_support_title_not_working">My app isn\'t working as expected</string>-->
+    <!--<string name="help_contact_support_title_access">I can\'t access my account</string>-->
+    <!--<string name="help_contact_support_title_connect">I\'m unable to connect an external service in Settings > Connected accounts</string>-->
+    <!--<string name="help_contact_support_title_interest">I can\'t find an Interest Page</string>-->
+    <!--<string name="help_contact_support_title_feedback">I have feedback or a feature request</string>-->
+    <!--<string name="help_contact_support_title_else">Something else…</string>-->
+
+    <!--<string name="help_contact_support_descr_not_working">&lt;h5>Try troubleshooting using the steps below:&lt;/h5>&lt;ul>&lt;li>Kill the App on your device;&lt;/li>&lt;li>Verify your email address by checking your Inbox for an email with subject \"Verify your email address\";&lt;/li>&lt;li>Relaunch the App;&lt;/li>&lt;li>If the App is still not working try deleting the App from your device and re-install from the Play Store (your data won\'t be lost).&lt;/li>&lt;/ul>&lt;h5>If the problem still persists please send us the following information in the box below:&lt;/h5>&lt;ul>&lt;li>Your UserID (the email address you\'ve signed up);&lt;/li>&lt;li>Your device brand and version;&lt;/li>&lt;li>A description of the issue with enough details for us to recreate the error.&lt;/li>&lt;/ul></string>-->
+    <!--<string name="help_contact_support_descr_access">&lt;h5>Please make sure you did verify your email on the device you are trying to use to access the App and you are not accessing the App with more than 5 different devices:&lt;/h5>&lt;ul>&lt;li>Kill the App on your device;&lt;/li>&lt;li>Verify your email address by checking your Inbox for an email with subject \"Verify your email address\";&lt;/li>&lt;li>Relaunch the App.&lt;/li>&lt;/ul>&lt;h5>If the problem still persists please send us the following information in the box below:&lt;/h5>&lt;ul>&lt;li>Your UserID (the email address you\'ve signed up);&lt;/li>&lt;li>Your device brand and version;&lt;/li>&lt;li>A description of the issue with enough details for us to recreate the error.&lt;/li>&lt;/ul></string>-->
+    <!--<string name="help_contact_support_descr_connect">&lt;h5>Try troubleshooting using the steps below:&lt;/h5>&lt;ul>&lt;li>Kill the App on your device;&lt;/li>&lt;li>Verify your email address by checking your Inbox for an email with subject \"Verify your email address\";&lt;/li>&lt;li>Relaunch the App;&lt;/li>&lt;li>Access to Settings &gt; Connected Accounts;&lt;/li>&lt;li>Re-enter your credentials to access the external account you\'d like to connect.&lt;/li>&lt;/ul>&lt;h5>If the problem still persists please send us the following information in the box below:&lt;/h5>&lt;ul>&lt;li>Your UserID (the email address you\'ve signed up);&lt;/li>&lt;li>Your device brand and version;&lt;/li>&lt;li>A description of the issue with enough details for us to recreate the error.&lt;/li>&lt;/ul></string>-->
+    <!--<string name="help_contact_support_descr_interest">&lt;h5>Which Interest Page are you looking for?&lt;/h5>&lt;p>Enter your feedback below:&lt;/p></string>-->
+    <!--<string name="help_contact_support_descr_feedback">&lt;h5>We\'re always listening for ideas and requests for new features!&lt;/h5>&lt;p>Enter your feedback below:&lt;/p></string>-->
+    <!--<string name="help_contact_support_descr_else">&lt;h5>Please tell us more.&lt;/h5>&lt;p>Enter your feedback below:&lt;/p></string>-->
+
+    <!--<string name="help_contact_press_text">&lt;p>Highlanders is the solution to the sole problem we as humans consider unsolvable.&lt;/p>&lt;p>Highlanders give people the power to extend their presence forever.&lt;/p>&lt;p>Users may share, love, and comment on their own thoughts and memories, as well as do the same with posts from their Inner Circle and from their followed Interests and also pin their favorite contents for \"future\" use where \"future\" means that \'Wishes\' they have scheduled to be executed out of select triggers will continue to be fulfilled with posts and actions among their Inner Circle or their connected IoT devices, as they wished.&lt;/p>&lt;p>For more details, contact us via email at &lt;a href=\"mailto:info@highlande.rs\"> info@highlande.rs&lt;/a>.&lt;/p>&lt;p>&lt;strong>Glossary and branding&lt;/strong>&lt;/p>&lt;ul>&lt;li>If you\'re writing about us, please refer to us as Highlanders — not \"Highlander\".&lt;/li>&lt;li>Our app, available in the iTunes Store and Google Play, is named \"Highlanders\".&lt;/li>&lt;li>Our tagline is \"Live forever, Love forever.\"&lt;/li>&lt;li>Our brand\'s primary colors are Orange: R242 G111 B33 (#F26F21) and Gray: R98 G99 B102 (#626366).&lt;/li>&lt;/ul></string>-->
+    <!--<string name="help_contact_joinus_text">&lt;p>We are based in Midtown Manhattan, New York.&lt;/p>&lt;p>As we continue to grow, we are always looking for exceptional talents and bright minds.&lt;/p>&lt;p>To know more about our full-time or internship opportunities, write us an email to &lt;a href=\"mailto:info@highlande.rs\"> info@highlande.rs&lt;/a>.&lt;/p></string>-->
+
+</resources>

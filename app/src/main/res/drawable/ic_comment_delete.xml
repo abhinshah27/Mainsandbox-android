@@ -1,0 +1,18 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="36dp"
+        android:height="46dp"
+        android:viewportWidth="36.0"
+        android:viewportHeight="46.0">
+    <path
+        android:pathData="M13.8,0C12.89,0 12,0.79 12,1.77L12,4.72L1.2,4.72C0.53,4.72 0,5.24 0,5.9L0,11.79C0,12.45 0.53,12.97 1.2,12.97L3.6,12.97L3.6,44.82C3.6,45.47 4.13,46 4.8,46L31.2,46C31.87,46 32.4,45.47 32.4,44.82L32.4,12.97L34.8,12.97C35.47,12.97 36,12.45 36,11.79L36,5.9C36,5.24 35.47,4.72 34.8,4.72L24,4.72L24,1.77C24,0.79 23.11,0 22.2,0L13.8,0ZM10.5,19C11.33,19 12,19.55 12,20.22L12,39.78C12,40.45 11.33,41 10.5,41C9.67,41 9,40.45 9,39.78L9,20.22C9,19.55 9.67,19 10.5,19ZM18.5,19C19.33,19 20,19.55 20,20.22L20,39.78C20,40.45 19.33,41 18.5,41C17.67,41 17,40.45 17,39.78L17,20.22C17,19.55 17.67,19 18.5,19ZM24.5,19C25.33,19 26,19.55 26,20.22L26,39.78C26,40.45 25.33,41 24.5,41C23.67,41 23,40.45 23,39.78L23,20.22C23,19.55 23.67,19 24.5,19Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="#D0021B"
+        android:strokeWidth="1"/>
+</vector>

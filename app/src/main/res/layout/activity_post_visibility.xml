@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <include layout="@layout/luiss_toolbar_btp"
+             android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/save_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/custom_divider"/>
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorAccent"
+            android:gravity="center|end"
+            android:text="@string/action_save"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            style="@style/Bold18"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/base_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/save_layout"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:divider="@null"
+        tools:listitem="@layout/item_post_visibility"
+        style="@style/ScrollbarStyle"/>
+
+</RelativeLayout>

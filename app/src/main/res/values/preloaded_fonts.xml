@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/open_sans_regular</item>
+        <item>@font/open_sans_bold</item>
+        <item>@font/open_sans_light</item>
+        <item>@font/open_sans_semibold</item>
+    </array>
+</resources>

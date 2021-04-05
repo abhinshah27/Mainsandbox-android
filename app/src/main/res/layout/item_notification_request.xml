@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        tools:background="@color/white">
+
+        <include layout="@layout/custom_layout_profile_picture"
+                 android:id="@+id/profile_picture"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/notification_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profile_picture"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="20dp"
+            style="@style/Bold16"
+            tools:text="John Henry"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profile_picture"
+            android:layout_below="@id/notification_name"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="20dp"
+            style="@style/Regular16"
+            tools:text="tagged you in a photo" />
+
+        <LinearLayout
+            android:id="@+id/icon_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:layout_below="@id/notification_text"
+            android:layout_alignStart="@id/notification_text">
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                tools:src="@drawable/ic_tag_mask"
+                tools:tint="@color/black_87"/>
+
+            <TextView
+                android:id="@+id/notification_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                style="@style/Regular14"
+                tools:text="1 hour ago." />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingEnd="@dimen/activity_margin"
+            android:layout_below="@id/icon_stamp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:id="@+id/notification_action_btns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/btn_allow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/selector_request_button_allow_2"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="12dp"
+                        style="@style/Regular16"
+                        android:text="@string/action_accept"
+                        android:textColor="@color/color_state_notifications_btn_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_deny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin_lg"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/selector_request_button_deny_2"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="12dp"
+                        style="@style/Regular16"
+                        android:text="@string/action_deny"
+                        android:textColor="@color/color_state_notifications_btn_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/notification_action_result"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|end"
+                style="@style/SemiBold16"
+                android:text="@string/notification_action_result"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/custom_divider"/>
+</LinearLayout>

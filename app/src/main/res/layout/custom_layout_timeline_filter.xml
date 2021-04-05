@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="150dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/filter_triangle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="23dp"
+        android:src="@drawable/shape_triangle"/>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_triangle"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="@dimen/activity_margin_lg"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/layer_tl_filter">
+
+        <TextView
+            android:id="@+id/filter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="3dp"
+            style="@style/Regular18"
+            android:text="@string/tl_filter_title" />
+
+        <Button
+            android:id="@+id/filter_apply_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/activity_margin_lg"
+            android:layout_marginEnd="@dimen/activity_margin_lg"
+            android:layout_marginTop="@dimen/activity_margin_lg"
+            android:layout_alignParentBottom="true"
+            style="@style/Regular18"
+            android:text="@string/action_apply"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/selector_cpost_send"/>
+
+        <ScrollView
+            android:id="@+id/filters_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/filter_apply_btn"
+            android:layout_below="@id/filter_title"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/filters_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

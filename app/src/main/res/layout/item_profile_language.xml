@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action_text"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:paddingStart="@dimen/activity_margin_lg"
+    android:paddingEnd="@dimen/activity_margin_lg"
+    android:layout_centerVertical="true"
+    style="@style/Regular18"
+    android:gravity="center"
+    android:textColor="@color/color_state_wish_item_list"
+    tools:text="Your action here"
+    android:background="@drawable/selector_background_wish_item_list"/>

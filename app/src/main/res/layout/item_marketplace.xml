@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="65dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/selector_background_marketplace_item_list"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:animateLayoutChanges="true">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <include layout="@layout/custom_layout_profile_picture_gray_border_mkt"
+                     android:id="@+id/profile_picture"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                android:duplicateParentState="true">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    style="@style/Regular18"
+                    android:maxLines="1"
+                    android:textColor="@color/color_state_marketplace_item_list"
+                    tools:text="Luke Skywalker"
+                    android:duplicateParentState="true"/>
+
+                <TextView
+                    android:id="@+id/conversion_and_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Obtain a $4,200 Gift Card"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:scrollHorizontally="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    style="@style/Regular16"
+                    android:textColor="@color/color_state_marketplace_item_list"
+                    android:duplicateParentState="true"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_54"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

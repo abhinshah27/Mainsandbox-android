@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/root_content"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/toolbar_container"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?android:attr/actionBarSize">-->
+
+            <include layout="@layout/luiss_toolbar_btp"
+                     android:id="@+id/toolbar"/>
+
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:id="@+id/toolbar1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/toolbar_height"-->
+                <!--app:contentInsetEnd="@dimen/activity_margin"-->
+                <!--android:gravity="center_vertical">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/logo_title"-->
+                        <!--android:layout_width="150dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_marginTop="14dp"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--app:srcCompat="@drawable/ic_highlanders_main_logo"/>-->
+
+                    <!--<include-->
+                        <!--android:id="@+id/profile_picture1"-->
+                        <!--layout="@layout/custom_layout_profile_picture_gray_border"-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_centerVertical="true"/>-->
+
+                <!--</RelativeLayout>-->
+
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<include layout="@layout/hl_bottom_bar_ic_black"-->
+                 <!--android:id="@+id/bottom_bar"-->
+                 <!--android:layout_width="match_parent"-->
+                 <!--android:layout_height="@dimen/bottom_bar_height"-->
+                 <!--android:layout_alignParentBottom="true"/>-->
+
+        <FrameLayout
+            android:id="@+id/pages_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/activity_margin_lg"
+            android:layout_below="@id/toolbar"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/custom_generic_progress_indicator"/>
+
+</FrameLayout>

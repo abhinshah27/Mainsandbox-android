@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/containerParticipant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_margin_lg"
+            android:paddingEnd="@dimen/activity_margin_lg"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            android:elevation="2dp">
+
+            <FrameLayout
+                android:id="@+id/picturePlusIndicator"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/custom_layout_profile_picture"
+                         android:id="@+id/profilePicture"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:layout_gravity="start"/>
+
+                <View
+                    android:id="@+id/availabilityIndicator"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/selector_chat_availability"
+                    android:layout_gravity="bottom|end"/>
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/actionsButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnVoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="mini"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    app:elevation="0dp"
+                    app:rippleColor="@color/black_70"
+                    app:srcCompat="@drawable/ic_call_voice_white"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="mini"
+                    app:elevation="0dp"
+                    app:rippleColor="@color/black_70"
+                    app:srcCompat="@drawable/ic_action_video"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/picturePlusIndicator"
+                android:layout_toStartOf="@id/actionsButtons"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/activity_margin"
+                    android:paddingEnd="@dimen/activity_margin"
+                    style="@style/Bold16"
+                    tools:text="John Jones"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <TextView
+                    android:id="@+id/participantLastSeen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="vertical"
+                    style="@style/SemiBold14"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingStart="@dimen/activity_margin"
+                    android:paddingEnd="@dimen/activity_margin"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/black_54"
+                    tools:text="Last seen 12:58Last seen 12:58Last seen 12:58Last seen 12:58Last seen 12:58Last seen 12:58Last seen 12:58"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/actionsBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_on_white"
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:id="@+id/btnPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/activity_margin"
+                    android:paddingEnd="@dimen/activity_margin"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    style="@style/Light36"
+                    android:text="+"
+                    android:textColor="@color/colorAccent"/>
+                android:background="@drawable/selector_button_round"
+
+                <RelativeLayout
+                    android:id="@+id/containerActions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center_vertical|end">
+
+                    <LinearLayout
+                        android:id="@+id/containerActionsButtons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="6dp"
+                        android:paddingStart="10dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/btnActionCamera"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:layout_gravity="end"
+                            app:srcCompat="@drawable/ic_chat_camera"/>
+
+                        <ImageView
+                            android:id="@+id/btnActionMic"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:layout_gravity="end"
+                            app:srcCompat="@drawable/ic_chat_mic"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/SemiBold18"
+                        android:padding="@dimen/activity_margin"
+                        android:text="@string/action_send"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <androidx.emoji.widget.EmojiAppCompatEditText
+                    android:id="@+id/messageBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:layout_toEndOf="@+id/btnPlus"
+                    android:layout_toStartOf="@id/containerActions"
+                    android:background="@drawable/shape_rectangle_rounded_white_w_border"
+                    android:maxHeight="100dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="@dimen/activity_margin"
+                    android:paddingEnd="@dimen/activity_margin"
+                    style="@style/Regular16"
+                    android:inputType="textCapSentences"
+                    android:hint="@string/chat_box_hint"
+                    tools:text="Lorem ipsum dolor sit amet" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/recordOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="60dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:paddingTop="@dimen/activity_margin_md"
+                android:paddingBottom="@dimen/activity_margin_md"
+                android:background="@color/divider_on_white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/recordingMic"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    app:srcCompat="@drawable/ic_chat_mic"/>
+
+                <Chronometer
+                    android:id="@+id/recordElapsedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Regular20"
+                    android:layout_centerVertical="true"
+                    android:countDown="false"
+                    android:layout_toEndOf="@+id/recordingMic"
+                    android:layout_marginStart="10dp"/>
+                android:background="@drawable/shape_rectangle_rounded_white_w_border"
+
+                <TextView
+                    android:id="@+id/slideToCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    style="@style/Regular16"
+                    android:text="@string/rec_slide_to_cancel"
+                    android:drawableStart="@drawable/ic_signup_left_indicator"
+                    android:drawablePadding="5dp"
+                    android:layout_marginStart="@dimen/activity_margin"/>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/frame"
+            android:layout_below="@id/containerParticipant">
+
+            <im.ene.toro.widget.Container
+                android:id="@+id/containerChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/bottom_sheet_chat_attach"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

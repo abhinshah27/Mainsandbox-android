@@ -1,0 +1,30 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="97dp"
+        android:height="97dp"
+        android:viewportWidth="97.0"
+        android:viewportHeight="97.0">
+    <path
+        android:pathData="M49.25,62C56.19,62 61.88,56.23 61.88,49.18L61.88,27.82C61.88,20.77 56.19,15 49.25,15C42.3,15 36.62,20.77 36.62,27.82L36.62,49.18C36.62,56.23 42.3,62 49.25,62Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="@color/colorAccent"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M65.84,42L65.84,48.32C65.84,57.58 58.49,65.16 49.5,65.16C40.52,65.16 33.17,57.58 33.17,48.32L33.17,42L25,42L25,48.32C25,60.74 33.78,71.26 45.42,73.16L45.42,82L53.58,82L53.58,73.16C65.22,71.05 74,60.73 74,48.32L74,42L65.84,42Z"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"
+        android:fillColor="@color/colorAccent"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M48.5,48.5m-47.5,0a47.5,47.5 0,1 1,95 0a47.5,47.5 0,1 1,-95 0"
+        android:fillType="evenOdd"
+        android:strokeColor="@color/colorAccent"
+        android:fillColor="#00000000"
+        android:strokeWidth="2"/>
+</vector>

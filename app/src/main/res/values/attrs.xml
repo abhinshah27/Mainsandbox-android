@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+
+    <!-- Open Sans -->
+
+    <declare-styleable name="OSLTextView">
+        <attr name="osLight" format="string" />
+    </declare-styleable>
+    <declare-styleable name="OSRTextView">
+        <attr name="osReg" format="string" />
+    </declare-styleable>
+    <declare-styleable name="OSSemiBTextView">
+        <attr name="osSemiBold" format="string" />
+    </declare-styleable>
+    <declare-styleable name="OSBTextView">
+        <attr name="osBold" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="OSREditText">
+        <attr name="osRegEdit" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="OSSemiBEditText">
+        <attr name="osSemiBoldEdit" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="OSSemiBButton">
+        <attr name="osSemiBBtn" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="OSBButton">
+        <attr name="osBBtn" format="string" />
+    </declare-styleable>
+
+</resources>
